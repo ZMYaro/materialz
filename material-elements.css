@@ -189,16 +189,16 @@ input[type="radio"] {
 		
 		background-color: transparent;
 		
-		-webkit-transition-delay: 0.05s, 0.05s, 0, 0;
-		   -moz-transition-delay: 0.05s, 0.05s, 0, 0;
-		    -ms-transition-delay: 0.05s, 0, 0;
-			 -o-transition-delay: 0.05s, 0, 0;
-			    transition-delay: 0.05s, 0;
-		-webkit-transition-duration: 0.1s, 0.1s 0.05s, 0.05s;
-		   -moz-transition-duration: 0.1s, 0.1s 0.05s, 0.05s;
-		    -ms-transition-duration: 0.1s, 0.05s, 0.05s;
-		     -o-transition-duration: 0.1s, 0.05s, 0.05s;
-		        transition-duration: 0.1s, 0.05s;
+		-webkit-transition-delay: 0.07s, 0.07s, 0, 0;
+		   -moz-transition-delay: 0.07s, 0.07s, 0, 0;
+		    -ms-transition-delay: 0.07s, 0, 0;
+			 -o-transition-delay: 0.07s, 0, 0;
+			    transition-delay: 0.07s, 0;
+		-webkit-transition-duration: 0.13s, 0.13s 0.07s, 0.07s;
+		   -moz-transition-duration: 0.13s, 0.13s 0.07s, 0.07s;
+		    -ms-transition-duration: 0.13s, 0.07s, 0.07s;
+		     -o-transition-duration: 0.13s, 0.07s, 0.07s;
+		        transition-duration: 0.13s, 0.07s;
 		-webkit-transition-timing-function: linear;
 		   -moz-transition-timing-function: linear;
 		    -ms-transition-timing-function: linear;
@@ -221,11 +221,11 @@ input[type="radio"] {
 		        transform: scale(1);
 	}
 		input[type="radio"]:checked::after {
-			-webkit-transition-delay: 0, 0, 0.1s, 0.1s;
-			   -moz-transition-delay: 0, 0, 0.1s, 0.1s;
-			    -ms-transition-delay: 0, 0.1s, 0.1s;
-			     -o-transition-delay: 0, 0.1s, 0.1s;
-			        transition-delay: 0, 0.1s;
+			-webkit-transition-delay: 0, 0, 0.13s, 0.13s;
+			   -moz-transition-delay: 0, 0, 0.13s, 0.13s;
+			    -ms-transition-delay: 0, 0.13s, 0.13s;
+			     -o-transition-delay: 0, 0.13s, 0.13s;
+			        transition-delay: 0, 0.13s;
 			
 			-webkit-box-shadow: inset 0 0 0 10px #40c4ff;
 			   -moz-box-shadow: inset 0 0 0 10px #40c4ff;
