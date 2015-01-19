@@ -26,6 +26,49 @@ body {
 	        transition-property: padding;
 }
 
+.toolbar {
+	padding: 16px;
+	font-size: 24px;
+}
+	.toolbar button,
+	.toolbar *[role="button"] {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		
+		vertical-align: top;
+		min-width: 0;
+		width: 56px;
+		height: 56px;
+		margin: -12px -2px; /* -12px to counter the toolbar's padding */
+		padding: 12px;
+		
+		background-color: transparent;
+		background-image: none;
+		
+		border-style: none;
+		border-width: 0px;
+		-webkit-border-radius: 50%;
+		   -moz-border-radius: 50%;
+				border-radius: 50%;
+		
+		-webkit-box-shadow: none;
+		   -moz-box-shadow: none;
+				box-shadow: none;
+	}
+		.toolbar button:hover,
+		.toolbar button:focus,
+		.toolbar *[role="button"]:hover,
+		.toolbar *[role="button"]:focus {
+			background-color: rgba(0,0,0,0.07);
+		}
+		.toolbar button:enabled:active,
+		.toolbar button:enabled.active,
+		.toolbar *[role="button"]:active,
+		.toolbar *[role="button"].active {
+			background-color: rgba(0,0,0,0.13);
+		}
+
 .appBar { /* the top action bar should be a <header> element */
 	display: block;
 	-webkit-box-sizing: border-box;
@@ -61,51 +104,27 @@ body {
 	     -o-transition-property: height, padding, font-size;
 	        transition-property: height, padding, font-size;
 }
-
-	.appBar button,
-	.appBar *[role="button"] {
-		-webkit-box-sizing: border-box;
-		   -moz-box-sizing: border-box;
-		        box-sizing: border-box;
-		
-		vertical-align: top;
-		min-width: 0;
-		width: 56px;
-		height: 56px;
-		margin: -12px; /* -12px to counter the toolbar's padding */
-		padding: 12px;
-		
-		background-color: transparent;
-		background-image: none;
-		
-		border-style: none;
-		border-width: 0px;
-		-webkit-border-radius: 50%;
-		   -moz-border-radius: 50%;
-				border-radius: 50%;
-		
-		-webkit-box-shadow: none;
-		   -moz-box-shadow: none;
-				box-shadow: none;
+	.appBar > .toolbar {
+		margin: -16px;
 	}
-		.appBar button:hover,
-		.appBar button:focus,
-		.appBar *[role="button"]:hover,
-		.appBar *[role="button"]:focus {
-			-webkit-box-shadow: none;
-			   -moz-box-shadow: none;
-					box-shadow: none;
-			
+		.appBar > .toolbar button:hover,
+		.appBar > .toolbar button:focus,
+		.appBar > .toolbar *[role="button"]:hover,
+		.appBar > .toolbar *[role="button"]:focus,
+		.appBar.toolbar button:hover,
+		.appBar.toolbar button:focus,
+		.appBar.toolbar *[role="button"]:hover,
+		.appBar.toolbar *[role="button"]:focus {
 			background-color: rgba(255,255,255,0.07);
 		}
-		.appBar button:enabled:active,
-		.appBar button:enabled.active,
-		.appBar *[role="button"]:active,
-		.appBar *[role="button"].active {
-			-webkit-box-shadow: none;
-			   -moz-box-shadow: none;
-					box-shadow: none;
-			
+		.appBar > .toolbar button:enabled:active,
+		.appBar > .toolbar button:enabled.active,
+		.appBar > .toolbar *[role="button"]:active,
+		.appBar > .toolbar *[role="button"].active,
+		.appBar.toolbar button:enabled:active,
+		.appBar.toolbar button:enabled.active,
+		.appBar.toolbar *[role="button"]:active,
+		.appBar.toolbar *[role="button"].active {
 			background-color: rgba(255,255,255,0.13);
 		}
 
@@ -182,4 +201,7 @@ body {
 		height: 56px;
 		padding: 12px;
 	}
+		.appBar > .toolbar {
+			margin: -12px;
+		}
 }

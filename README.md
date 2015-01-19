@@ -8,15 +8,16 @@ If you want Material-/Paper-themed HTML elements on your page, you just need to 
 
 ##Add Material widgets
 You can use widgets such as action bars, lists, and cards by adding “material-widgets.css” and specifying classes:
-* To add a top app bar, add a `<header>` element with the class `appBar` (e.g., `<header class="appBar">`).
-  - (Use a `<footer>` element for a bottom action bar like in Android 4.)
+* To add a top app bar, add an element with the `appBar` class (e.g., `<header class="appBar">`).
+* To add a toolbar, add an element with the `toolbar` class (e.g., `<div class="toolbar">`).  Toolbar buttons are flat and circular by dfault.
+  - An Android action bar is frequently just an app bar with toolbar buttons - `<header class="appBar toolbar">`.
 * To add a list, add a `<ul>` or `<ol>` element with the class `list` (e.g., `<ul class="list">`).
 * To add a card, add the `card` class to an element.  You may wish to use the depth classes to "raise" the card as well (see below).
 
 Note: adding the widgets stylesheet will automatically add padding to the `body` for the default app bar size.
 
 ##Add depth
-You can add shadows to elements with classes `z1`-`z5`.  These are best used with `<button>`s and `.card`s (e.g., `<button class="z1">` for a raised button, `<div class="card z2">`).
+You can add shadows to elements with classes `z1`-`z5`.  These are best used with `<button>`s (e.g., `<button class="z1">` for a raised button), `.card`s (e.g., `<div class="card z2">`), and `.appBar`s (e.g., `<header class="appBar z3">`).
 
 ##Make it work on older mobile browsers
 One great use of MaterialZ is to make mobile web sites look like native Android L apps.  MaterialZ includes a script to make sure all widgets respond to touch properly in mobile WebKit (Mobile Safari, Android Browser, Chrome for Android).
