@@ -31,7 +31,10 @@ body {
 	font-size: 24px;
 }
 	.toolbar button,
-	.toolbar *[role="button"] {
+	.toolbar *[role="button"],
+	.toolbar input[type="button"],
+	.toolbar input[type="submit"],
+	.toolbar input[type="reset"] {
 		-webkit-box-sizing: border-box;
 		   -moz-box-sizing: border-box;
 		        box-sizing: border-box;
@@ -59,13 +62,25 @@ body {
 		.toolbar button:hover,
 		.toolbar button:focus,
 		.toolbar *[role="button"]:hover,
-		.toolbar *[role="button"]:focus {
+		.toolbar *[role="button"]:focus,
+		.toolbar input[type="button"]:hover,
+		.toolbar input[type="button"]:focus,
+		.toolbar input[type="submit"]:hover,
+		.toolbar input[type="submit"]:focus,
+		.toolbar input[type="reset"]:hover,
+		.toolbar input[type="reset"]:focus {
 			background-color: rgba(0,0,0,0.07);
 		}
 		.toolbar button:enabled:active,
 		.toolbar button:enabled.active,
 		.toolbar *[role="button"]:active,
-		.toolbar *[role="button"].active {
+		.toolbar *[role="button"].active,
+		.toolbar input[type="button"]:active,
+		.toolbar input[type="button"].active,
+		.toolbar input[type="submit"]:active,
+		.toolbar input[type="submit"].active,
+		.toolbar input[type="reset"]:active,
+		.toolbar input[type="reset"].active {
 			background-color: rgba(0,0,0,0.13);
 		}
 
@@ -111,20 +126,44 @@ body {
 		.appBar > .toolbar button:focus,
 		.appBar > .toolbar *[role="button"]:hover,
 		.appBar > .toolbar *[role="button"]:focus,
+		.appBar > .toolbar input[type="button"]:hover,
+		.appBar > .toolbar input[type="button"]:focus,
+		.appBar > .toolbar input[type="submit"]:hover,
+		.appBar > .toolbar input[type="submit"]:focus,
+		.appBar > .toolbar input[type="reset"]:hover,
+		.appBar > .toolbar input[type="reset"]:focus,
 		.appBar.toolbar button:hover,
 		.appBar.toolbar button:focus,
 		.appBar.toolbar *[role="button"]:hover,
-		.appBar.toolbar *[role="button"]:focus {
+		.appBar.toolbar *[role="button"]:focus,
+		.appBar.toolbar input[type="button"]:hover,
+		.appBar.toolbar input[type="button"]:focus,
+		.appBar.toolbar input[type="submit"]:hover,
+		.appBar.toolbar input[type="submit"]:focus,
+		.appBar.toolbar input[type="reset"]:hover,
+		.appBar.toolbar input[type="reset"]:focus {
 			background-color: rgba(255,255,255,0.07);
 		}
 		.appBar > .toolbar button:enabled:active,
 		.appBar > .toolbar button:enabled.active,
 		.appBar > .toolbar *[role="button"]:active,
 		.appBar > .toolbar *[role="button"].active,
+		.appBar > .toolbar input[type="button"]:active,
+		.appBar > .toolbar input[type="button"].active,
+		.appBar > .toolbar input[type="submit"]:active,
+		.appBar > .toolbar input[type="submit"].active,
+		.appBar > .toolbar input[type="reset"]:active,
+		.appBar > .toolbar input[type="reset"].active,
 		.appBar.toolbar button:enabled:active,
 		.appBar.toolbar button:enabled.active,
 		.appBar.toolbar *[role="button"]:active,
-		.appBar.toolbar *[role="button"].active {
+		.appBar.toolbar *[role="button"].active,
+		.appBar.toolbar input[type="button"]:active,
+		.appBar.toolbar input[type="button"].active,
+		.appBar.toolbar input[type="submit"]:active,
+		.appBar.toolbar input[type="submit"].active,
+		.appBar.toolbar input[type="reset"]:active,
+		.appBar.toolbar input[type="reset"].active {
 			background-color: rgba(255,255,255,0.13);
 		}
 
@@ -167,9 +206,15 @@ body {
 			        box-shadow: none;
 		}
 			.list li button:enabled:active,
-			.list li *[role="button"]:active,
 			.list li button:enabled.active,
-			.list li *[role="button"].active {
+			.list li *[role="button"]:active,
+			.list li *[role="button"].active,
+			.list li input[type="button"]:enabled:active,
+			.list li input[type="button"]:enabled.active,
+			.list li input[type="submit"]:enabled:active,
+			.list li input[type="submit"]:enabled.active,
+			.list li input[type="reset"]:enabled:active,
+			.list li input[type="reset"]:enabled.active {
 				-webkit-box-shadow: none;
 				   -moz-box-shadow: none;
 				        box-shadow: none;
