@@ -51,7 +51,7 @@ input[type="reset"],
 select:not([size]),
 select[size="1"] {
 	display: inline-block;
-	margin: 6px;
+	margin: 4px;
 	padding: 8px 16px;
 	border: 0 none;
 	background-color: transparent;
@@ -93,6 +93,7 @@ select[size="1"] {
 	select:not([size]):focus,
 	select[size="1"]:focus {
 		background-color: #e2e3e3;
+		background-color: rgba(128, 128, 128, 0.2);
 	}
 	/* The “active” class is used to force the appearance of the active/pressed state */
 	button:enabled:active,
@@ -110,6 +111,7 @@ select[size="1"] {
 	select:not([size]).active,
 	select[size="1"].active {
 		background-color: #c4c5c5;
+		background-color: rgba(128, 128, 128, 0.4);
 	}
 	select::-ms-expand { /* Drop-down arrow in IE */
 		display: none;
