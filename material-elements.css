@@ -50,10 +50,11 @@ input[type="submit"],
 input[type="reset"],
 select:not([size]),
 select[size="1"] {
-	min-width: 128px;
+	display: inline-block;
 	margin: 6px;
-	padding: 13px 20px;
+	padding: 8px 16px;
 	border: 0 none;
+	background-color: transparent;
 	-webkit-border-radius: 3px;
 	   -moz-border-radius: 3px;
 	        border-radius: 3px;
@@ -64,8 +65,7 @@ select[size="1"] {
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"] {
-		display: inline-block;
-		background-color: d6d7d7;
+		text-transform: uppercase;
 	}
 	select:not([size]),
 	select[size="1"] {
@@ -318,7 +318,7 @@ input[type="range"]::-ms-track {
 	border-style: none;
 	border-width: 0;
 }
-input[type="range"]::-ms-ticks-before, input[type="range"]::-ms-ticks-after {	
+input[type="range"]::-ms-ticks-before, input[type="range"]::-ms-ticks-after {
 	display: none;
 }
 
