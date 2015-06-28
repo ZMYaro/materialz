@@ -23,6 +23,25 @@ body {
 	background-color: #fafafa;
 }
 
+/* --------======== HEADINGS and TYPOGRAPHY ========-------- */
+h1 {
+	font-size: 150%;
+	font-weight: normal;
+}
+h2 {
+	font-size: 125%;
+	font-weight: 500; /* Medium */
+}
+h3 {
+	font-size: 110%;
+	font-weight: normal;
+}
+caption,
+figcaption {
+	font-size: 75%;
+	font-weight: normal;
+}
+
 a {
 	color: #33B5E5;
 }
@@ -66,7 +85,7 @@ select[size="1"] {
 	input[type="submit"],
 	input[type="reset"] {
 		text-transform: uppercase;
-		font-weight: 500;
+		font-weight: 500; /* Medium */
 	}
 	select:not([size]),
 	select[size="1"] {
