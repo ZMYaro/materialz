@@ -195,6 +195,7 @@ body {
 			font-family: inherit;
 			font-size: inherit;
 			text-align: left;
+			text-transform: none;
 			
 			border: 0 none;
 			-wekbit-border-radius: 0;
