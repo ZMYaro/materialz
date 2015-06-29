@@ -9,8 +9,8 @@ If you want Material-/Paper-themed HTML elements on your page, you just need to 
 ##Add Material widgets
 You can use widgets such as action bars, lists, and cards by adding “material-widgets.css” and specifying classes:
 * To add a top app bar, add an element with the `appBar` class (e.g., `<header class="appBar">`).
-* To add a toolbar, add an element with the `toolbar` class (e.g., `<div class="toolbar">`).  Toolbar buttons are flat and circular by dfault.
-  - An Android action bar is frequently just an app bar with toolbar buttons - `<header class="appBar toolbar">`.
+* To add a toolbar, add an element with `role="toolbar"` class (e.g., `<div role="toolbar">`).  Toolbar buttons are flat and circular by dfault.
+  - An Android action bar is frequently just an app bar with toolbar buttons - `<header class="appBar" role="toolbar">`.
 * To add a list, add a `<ul>` or `<ol>` element with the class `list` (e.g., `<ul class="list">`).
 * To add a card, add the `card` class to an element.  You may wish to use the depth classes to "raise" the card as well (see below).
 
