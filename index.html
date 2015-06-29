@@ -42,12 +42,18 @@
 		<h3>h3</h3>
 		<button>button</button>
 		<button class="z1">button.z1</button>
+		<button disabled="disabled">button</button>
+		<button class="z1" disabled="disabled">button.z1</button>
 		<br />
 		<input type="radio" name="radioset1" />
 		<input type="radio" name="radioset1" checked="checked" />
+		<input type="radio" name="radioset1" disabled="disabled" />
+		<input type="radio" name="radioset1" checked="checked" disabled="disabled" />
 		<br />
 		<input type="checkbox" />
 		<input type="checkbox" checked="checked" />
+		<input type="checkbox" disabled="disabled" />
+		<input type="checkbox" checked="checked" disabled="disabled" />
 		<br />
 		<select>
 			<option>select</option>
@@ -57,12 +63,15 @@
 			<option>Sit</option>
 			<option>Amet</option>
 		</select>
+		<select disabled="disabled">
+			<option>select</option>
+		</select>
 		<br />
 		<input type="text" placeholder="input[type=&quot;text&quot;]" />
-		<br />
-		<input type="range" min="0" max="10" value="5" />
+		<input type="text" placeholder="input[type=&quot;text&quot;]" disabled="disabled" />
 		<br /><br />
-		<input type="range" min="0" max="10" value="5" disabled />
+		<input type="range" min="0" max="10" value="5" />
+		<input type="range" min="0" max="10" value="5" disabled="disabled" />
 		<br /><br />
 		<progress value="0.5"></progress>
 		<br /><br />
