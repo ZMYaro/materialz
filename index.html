@@ -18,7 +18,7 @@
 		<link rel="apple-touch-icon-precomposed" sizes="192x192" href="icon/icon_192.png" />
 	</head>
 	<body>
-		<header class="appBar toolbar">
+		<header role="toolbar" class="appBar">
 			<button style="float: right;" title=".toolbar > button">
 				<img src="demo_icons/appbar3.png" alt="Icon" />
 			</button>
@@ -47,8 +47,8 @@
 		<br />
 		<input type="radio" name="radioset1" />
 		<input type="radio" name="radioset1" checked="checked" />
-		<input type="radio" name="radioset1" disabled="disabled" />
-		<input type="radio" name="radioset1" checked="checked" disabled="disabled" />
+		<input type="radio" name="radioset2" disabled="disabled" />
+		<input type="radio" name="radioset2" checked="checked" disabled="disabled" />
 		<br />
 		<input type="checkbox" />
 		<input type="checkbox" checked="checked" />
@@ -82,7 +82,7 @@
 			<li><button style="width: 100%; width: calc(100% + 32px);">.list > li > button</button></li>
 		</ul>
 		<br />
-		<div class="toolbar">
+		<div role="toolbar">
 			.toolbar
 			<button title=".toolbar > button">
 				<img src="demo_icons/toolbar1.png" alt="Icon" />
