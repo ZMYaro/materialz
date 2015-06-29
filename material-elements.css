@@ -62,6 +62,20 @@ input[type="range"]::-webkit-slider-thumb {
 	text-decoration: none;
 }
 
+/* Clickable elements */
+button,
+*[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"],
+select:not([size]),
+select[size="1"] {
+	cursor: pointer;
+}
+
 /* --------======== BUTTONS and DROP-DOWNS ========-------- */
 button, *[role="button"],
 input[type="button"],
@@ -77,7 +91,6 @@ select[size="1"] {
 	-webkit-border-radius: 3px;
 	   -moz-border-radius: 3px;
 	        border-radius: 3px;
-	cursor: default;
 }
 	button,
 	*[role="button"],
@@ -482,6 +495,8 @@ textarea {
 
 *:disabled {
 	opacity: 0.3;
+	cursor: default;
+	cursor: not-allowed;
 }
 
 @media (max-width: 600px) {
