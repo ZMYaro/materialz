@@ -111,13 +111,13 @@ select[size="1"] {
 		background-repeat: no-repeat;
 		padding-right: 36px;
 	}
-	button:hover,
-	*[role="button"]:hover,
-	input[type="button"]:hover,
-	input[type="submit"]:hover,
-	input[type="reset"]:hover,
-	select:hover,
-	select[size="1"]:hover,
+	button:not(:disabled):hover,
+	*[role="button"]:not(:disabled):hover,
+	input[type="button"]:not(:disabled):hover,
+	input[type="submit"]:not(:disabled):hover,
+	input[type="reset"]:not(:disabled):hover,
+	select:not(:disabled):hover,
+	select[size="1"]:not(:disabled):hover,
 	button:focus,
 	*[role="button"]:focus,
 	input[type="button"]:focus,
@@ -129,20 +129,20 @@ select[size="1"] {
 		background-color: rgba(128, 128, 128, 0.2);
 	}
 	/* The “active” class is used to force the appearance of the active/pressed state */
-	button:enabled:active,
-	*[role="button"]:active,
-	input[type="button"]:enabled:active,
-	input[type="submit"]:enabled:active,
-	input[type="reset"]:enabled:active,
-	select:not([size]):enabled:active,
-	select[size="1"]:enabled:active,
-	button:enabled.active,
-	*[role="button"].active,
-	input[type="button"]:enabled.active,
-	input[type="submit"]:enabled.active,
-	input[type="reset"]:enabled.active,
-	select:not([size]).active,
-	select[size="1"].active {
+	button:not(:disabled):active,
+	*[role="button"]:not(:disabled):active,
+	input[type="button"]:not(:disabled):active,
+	input[type="submit"]:not(:disabled):active,
+	input[type="reset"]:not(:disabled):active,
+	select:not([size]):not(:disabled):active,
+	select[size="1"]:not(:disabled):active,
+	button:not(:disabled).active,
+	*[role="button"]:not(:disabled).active,
+	input[type="button"]:not(:disabled).active,
+	input[type="submit"]:not(:disabled).active,
+	input[type="reset"]:not(:disabled).active,
+	select:not([size]):not(:disabled).active,
+	select[size="1"]:not(:disabled).active {
 		background-color: #c4c5c5;
 		background-color: rgba(128, 128, 128, 0.4);
 	}
@@ -410,8 +410,8 @@ input[type="range"], progress {
 			box-shadow: 0 0 0 14px rgba(128, 128, 128, 0.2),
 			            0 0 0 0    rgba(128, 128, 128, 0.2);
 		}
-		input[type="range"]:active::-webkit-slider-thumb,
-		input[type="range"].active::-webkit-slider-thumb {
+		input[type="range"]:not(:disabled):active::-webkit-slider-thumb,
+		input[type="range"]:not(:disabled).active::-webkit-slider-thumb {
 			width: 18px;
 			height: 18px;
 			-webkit-box-shadow: 0 0 0 11px rgba(128, 128, 128, 0.2),
@@ -419,8 +419,8 @@ input[type="range"], progress {
 			        box-shadow: 0 0 0 11px rgba(128, 128, 128, 0.2),
 			                    0 0 0 11px rgba(128, 128, 128, 0.2);
 		}
-		input[type="range"]:active::-moz-range-thumb,
-		input[type="range"].active::-moz-range-thumb {
+		input[type="range"]:not(:disabled):active::-moz-range-thumb,
+		input[type="range"]:not(:disabled).active::-moz-range-thumb {
 			width: 18px;
 			height: 18px;
 			-moz-box-shadow: 0 0 0 11px rgba(128, 128, 128, 0.2),
@@ -428,8 +428,8 @@ input[type="range"], progress {
 			     box-shadow: 0 0 0 11px rgba(128, 128, 128, 0.2),
 			                 0 0 0 11px rgba(128, 128, 128, 0.2);
 		}
-		input[type="range"]:active::-ms-thumb,
-		input[type="range"].active::-ms-thumb {
+		input[type="range"]:not(:disabled):active::-ms-thumb,
+		input[type="range"]:not(:disabled).active::-ms-thumb {
 			width: 18px;
 			height: 18px;
 			box-shadow: 0 0 0 11px rgba(128, 128, 128, 0.2),
