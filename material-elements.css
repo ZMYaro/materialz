@@ -493,7 +493,16 @@ textarea {
 		outline: 0 none transparent;
 	}
 
-*:disabled {
+*:disabled,
+button:disabled,
+*[role="button"]:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled,
+input[type="range"]:disabled,
+select:disabled {
 	opacity: 0.3;
 	cursor: default;
 	cursor: not-allowed;
