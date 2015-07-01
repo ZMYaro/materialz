@@ -50,8 +50,7 @@ button,
 *[role="button"],
 input,
 select,
-textarea,
-input[type="range"]::-webkit-slider-thumb {
+textarea {
 	-webkit-appearance: none;
 	   -moz-appearance: none;
 	     -o-appearance: none;
@@ -364,9 +363,15 @@ input[type="range"], progress {
 	}
 	
 	input[type="range"]::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		        appearance: none;
+		-webkit-tap-highlight-color: transparent !important;
+		color: inherit;
+		outline: 0 none;
+		border: 0 none;
+
 		width: 12px;
 		height: 12px;
-		border: 0 none;
 		-webkit-border-radius: 50%;
 		        border-radius: 50%;
 		background-color: #40c4ff;
