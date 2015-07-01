@@ -187,7 +187,10 @@ body {
 		}
 		
 		.list li button,
-		.list li *[role="button"] {
+		.list li *[role="button"],
+		.list li input[type="button"],
+		.list li input[type="submit"],
+		.list li input[type="reset"] {
 			display: block;
 			margin: -16px;
 			padding: 16px;
@@ -207,6 +210,15 @@ body {
 			   -moz-box-shadow: none;
 			        box-shadow: none;
 		}
+			
+			.list li button:hover,
+			.list li *[role="button"]:hover,
+			.list li input[type="button"]:hover,
+			.list li input[type="submit"]:hover,
+			.list li input[type="reset"]:hover {
+				background-color: #f2f2f2;
+				background-color: rgba(0, 0, 0, 0.05);
+			}
 			.list li button:enabled:active,
 			.list li button:enabled.active,
 			.list li *[role="button"]:active,
