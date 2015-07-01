@@ -53,6 +53,7 @@ select,
 textarea,
 input[type="range"]::-webkit-slider-thumb {
 	-webkit-appearance: none;
+	   -moz-appearance: none;
 	     -o-appearance: none;
 	        appearance: none;
 	-webkit-tap-highlight-color: transparent !important;
@@ -110,6 +111,10 @@ select[size="1"] {
 		background-position: right center;
 		background-repeat: no-repeat;
 		padding-right: 36px;
+		
+		/* Hide the default arrow in Gecko. */
+		text-indent: 0.01px;
+		text-overflow: '';
 	}
 	button:not(:disabled):hover,
 	*[role="button"]:not(:disabled):hover,
