@@ -2,122 +2,430 @@
 <html>
 	<head>
 		<title>MaterialZ</title>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		
+		<link rel="shortcut icon" type="image/x-icon" href="icon/favicon.ico" />
+		<link rel="icon" sizes="192x192" href="icon/icon_192.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="192x192" href="icon/icon_192.png" />
+		
 		<link rel="stylesheet" type="text/css" href="material-elements.css" />
 		<link rel="stylesheet" type="text/css" href="material-widgets.css" />
 		<link rel="stylesheet" type="text/css" href="material-depth.css" />
 		
+		<style type="text/css">
+			body {
+				background-color: #f9f9f9;
+			}
+			
+			code {
+				font-family: monospace;
+				padding: 2px 4px;
+				background-color: #dde3e6;
+				-webkit-border-radius: 2px;
+				   -moz-border-radius: 2px;
+				        border-radius: 2px;
+			}
+				code.col {
+					padding: 16px;
+				}
+			
+			h1 {
+				margin: 0 0 16px;
+			}
+			
+			p,
+			.card {
+				margin: 16px 0;
+			}
+			
+			.col {
+				-webkit-box-sizing: border-box;
+				   -moz-box-sizing: border-box;
+				        box-sizing: border-box;
+				width: 49%;
+				display: inline-block;
+				vertical-align: top;
+				margin: 16px 0 0;
+			}
+			
+			@media (max-width: 600px) {
+				.card {
+					margin: 8px 0;
+				}
+				
+				.col {
+					width: 100%;
+					box-sizing: border-box;
+				}
+			}
+		</style>
+		
 		<script type="text/javascript" src="material-touch.js"></script>
 		
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
 		
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-		<link rel="shortcut icon" type="image/x-icon" href="icon/favicon.ico" />
-		<link rel="icon" sizes="192x192" href="icon/icon_192.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="192x192" href="icon/icon_192.png" />
 	</head>
 	<body>
-		<header role="toolbar" class="appBar">
-			<button style="float: right;" title=".toolbar > button">
-				<img src="demo_icons/appbar3.png" alt="Icon" />
+		<header role="toolbar" class="appBar z2">
+			<button style="float: right;" title="Button 3">
+				<img src="demo_icons/appbar3.png" alt="Icon 3" />
 			</button>
-			<button style="float: right;" title=".toolbar > button">
-				<img src="demo_icons/appbar2.png" alt="Icon" />
+			<button style="float: right;" title="Button 2">
+				<img src="demo_icons/appbar2.png" alt="Icon 2" />
 			</button>
-			<button style="float: right;" title=".toolbar > button">
-				<img src="demo_icons/appbar1.png" alt="Icon" />
+			<button style="float: right;" title="Button 1">
+				<img src="demo_icons/appbar1.png" alt="Icon 1" />
 			</button>
 			MaterialZ
 		</header>
 		<p>
-			<a href="https://github.com/zmyaro/materialz" target="_blank">MaterialZ</a> is a CSS library created by <a href="http://zmyaro.com" target="_blank">Zachary Yaro</a> that implements the <a href="http://www.google.com/design/spec/material-design/introduction.html" target="_blank">Material Design spec</a>.  Simply adding the stylesheets will instantly Material-theme any site.  With a few tweaks, the site can also add other UI widgets, such as app bars, lists, and cards.
-		</p>
-		<p>
-			Below is a demo of elements themed using the MaterialZ library.
+			<a href="https://github.com/zmyaro/materialz" target="_blank">MaterialZ</a> is a CSS library created by <a href="http://zmyaro.com" target="_blank">Zachary Yaro</a> that implements the <a href="http://www.google.com/design/spec/material-design/introduction.html" target="_blank">Material Design spec</a>.  Simply adding the stylesheets will instantly Material-theme any site.  With a few tweaks, other widgets, such as app bars, lists, and cards, can be added.
 		</p>
 		<br />
-		<h1>h1</h1>
-		<h2>h2</h2>
-		<h3>h3</h3>
-		<button>button</button>
-		<button class="z1">button.z1</button>
-		<button disabled="disabled">button</button>
-		<button class="z1" disabled="disabled">button.z1</button>
+		<h1 id="elements">Elements</h1>
+		<p>Adding the <code>material-elements.css</code> style sheet will automatically style the following elements.  That style sheet works based on standard HTML elements and attributes, so it can work without adding additional classes other frameworks without CSS classes clashing.</p>
+		<section class="card z1">
+			<h1>Headings</h1>
+			<p>The top three levels of headings have been styled according to the heading, title, and subhead styles in the <a href="http://www.google.com/design/spec/style/typography.html#typography-styles" target="_blank">Material Design guidelines</a>.</p>
+			<div class="col">
+				<h1>Headline</h1>
+				<h2>Title</h2>
+				<h3>Subhead</h3>
+			</div>
+			<code class="col">
+				&lt;h1&gt;Headline&lt;/h1&gt;
+				<br />
+				&lt;h2&gt;Title&lt;/h2&gt;
+				<br />
+				&lt;h3&gt;Subhead&lt;/h3&gt;
+			</code>
+		</section>
+		<section class="card z1">
+			<h1>Buttons</h1>
+			<p>Any <code>&lt;button&gt;</code> element, any <code>&lt;input&gt;</code> with <code>type</code> set to <code>button</code>, <code>submit</code>, or <code>reset</code>, or any other element with <code>role="button"</code> will automatically be styled as an edgeless paper button.  Adding a depth class will turn it into a raised button (see <a href="#depth">Depth</a> below).</p>
+			<div class="col">
+				<button>Button</button>
+				<button class="z1">Raised button</button>
+				<br />
+				<button disabled="disabled">Disabled button</button>
+				<button class="z1" disabled="disabled">Disabled raised button</button>
+				<br />
+				<input type="button" value="Input button" />
+				<input type="button" class="z1" value="Raised input button" />
+				<br />
+				<div role="button">Div button</div>
+				<div role="button" class="z1">Raised div button</div>
+			</div>
+			<code class="col">
+				&lt;button&gt;Button&lt;/button&gt;
+				<br />
+				&lt;button class="z1"&gt;Raised button&lt;/button&gt;
+				<br />
+				<br />
+				&lt;button disabled="disabled"&gt;Disabled button&lt;/button&gt;
+				<br />
+				&lt;button class="z1" disabled="disabled"&gt;Disabled raised button&lt;/button&gt;
+				<br />
+				<br />
+				&lt;input type="button" value="Input Button" /&gt;
+				<br />
+				&lt;input type="button" class="z1" value="Raised input button" /&gt;
+				<br />
+				<br />
+				&lt;div role="button"&gt;Div Button&lt;/div&gt;
+				<br />
+				&lt;div role="button" class="z1"&gt;Raised Div Button&lt;/div&gt;
+			</code>
+		</section>
+		<section class="card z1">
+			<h1>Radio buttons</h1>
+			<p>An <code>&lt;input type="radio" /&gt;</code> will be styled and animated as a paper radio button.</p>
+			<div class="col">
+				<input type="radio" name="radioset1" />
+				<input type="radio" name="radioset1" checked="checked" />
+				<input type="radio" name="radioset2" disabled="disabled" />
+				<input type="radio" name="radioset2" checked="checked" disabled="disabled" />
+			</div>
+			<code class="col">
+				&lt;input type="radio" name="radioset1" /&gt;
+				<br />
+				&lt;input type="radio" name="radioset1" checked="checked" /&gt;
+				<br />
+				&lt;input type="radio" name="radioset2" disabled="disabled" /&gt;
+				<br />
+				&lt;input type="radio" name="radioset2" checked="checked" disabled="disabled" /&gt;
+			</code>
+		</section>
+		<section class="card z1">
+			<h1>Checkboxes</h1>
+			<p>An <code>&lt;input type="checkbox" /&gt;</code> will be styled and animated as a paper checkbox.</p>
+			<div class="col">
+				<input type="checkbox" />
+				<input type="checkbox" checked="checked" />
+				<input type="checkbox" disabled="disabled" />
+				<input type="checkbox" checked="checked" disabled="disabled" />
+			</div>
+			<code class="col">
+				&lt;input type="checkbox" /&gt;
+				<br />
+				&lt;input type="checkbox" checked="checked" /&gt;
+				<br />
+				&lt;input type="checkbox" disabled="disabled" /&gt;
+				<br />
+				&lt;input type="checkbox" checked="checked" disabled="disabled" /&gt;
+			</code>
+		</section>
+		<section class="card z1">
+			<h1>Drop-down menus</h1>
+			<p>A simple <code>&lt;select&gt;</code> element will be styled as a paper drop-down menu.</p>
+			<div class="col">
+				<select>
+					<option>Lorem</option>
+					<option>Ipsum</option>
+					<option>Dolor</option>
+					<option>Sit</option>
+					<option>Amet</option>
+				</select>
+			</div>
+			<code class="col">
+				&lt;select&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Lorem&lt;/option&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Ipsum&lt;/option&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Dolor&lt;/option&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Sit&lt;/option&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Amet&lt;/option&gt;
+				<br />
+				&lt;/select&gt;
+			</code>
+		</section>
+		<section class="card z1">
+			<h1>Text fields</h1>
+			<p>Any <code>&lt;input /&gt;</code> with <code>type</code> set to <code>search</code>, <code>password</code>, <code>email</code>, <code>url</code>, or <code>number</code> will be styled as a paper text field.</p>
+			<div class="col">
+				<input type="text" placeholder="Text field" />
+			</div>
+			<code class="col">
+				&lt;input type="text" placeholder="Text field" /&gt;
+			</code>
+		</section>
+		<section class="card z1">
+			<h1>Sliders</h1>
+			<p>Any <code>&lt;input type="range" /&gt;</code> will be styled as a paper slider.</p>
+			<div class="col">
+				<input type="range" />
+				<input type="range" disabled="disabled" />
+			</div>
+			<code class="col">
+				&lt;input type="range" /&gt;
+				<br />
+				&lt;input type="range" disabled="disabled" /&gt;
+			</code>
+		</section>
+		<section class="card z1">
+			<h1>Progress bars</h1>
+			<p>Any <code>&lt;progress&gt;</code> element will be styled as a paper progress bar.</p>
+			<div class="col">
+				<progress value="0.5"></progress>
+			</div>
+			<code class="col">
+				&lt;progress value="0.5"&gt;&lt;/progress&gt;
+			</code>
+		</section>
+		
 		<br />
-		<input type="radio" name="radioset1" />
-		<input type="radio" name="radioset1" checked="checked" />
-		<input type="radio" name="radioset2" disabled="disabled" />
-		<input type="radio" name="radioset2" checked="checked" disabled="disabled" />
+		<h1 id="widgets">Widgets</h1>
+		<p>Adding the <code>material-widgets.css</code> style sheet will allow the following widgets to be added.</p>
+		<section class="card z1">
+			<h1>Lists</h1>
+			<p>An <code>&lt;ol&gt;</code> or <code>&lt;ul&gt;</code> with the <code>list</code> class will have its list items and buttons styled.</p>
+			<div class="col">
+				<ul class="list">
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li><button style="width: 100%; width: calc(100% + 32px);">Button</button></li>
+					<li><div role="button">Div button</button></li>
+				</ul>
+			</div>
+			<code class="col">
+				&lt;ul class="list"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;button&gt;Button&lt;/button&gt;&lt;/li&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;div role="button"&gt;Div button&lt;/button&gt;&lt;/li&gt;
+				<br />
+				&lt;/ul&gt;
+			</code>
+		</section>
+		<section class="card z1">
+			<h1>Toolbars</h1>
+			<p>An element with <code>role="toolbar"</code> will have its buttons styled as paper toolbar buttons.</p>
+			<div class="col">
+				<div role="toolbar">
+					<button title="Button 1">
+						<img src="demo_icons/toolbar1.png" alt="Icon 1" />
+					</button>
+					<button title="Button 2">
+						<img src="demo_icons/toolbar2.png" alt="Icon 2" />
+					</button>
+					<button title="Button 3">
+						<img src="demo_icons/toolbar3.png" alt="Icon 3" />
+					</button>
+					<button title="Button 4">
+						<img src="demo_icons/toolbar4.png" alt="Icon 4" />
+					</button>
+				</div>
+			</div>
+			<code class="col">
+				&lt;div role="toolbar"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Button 1"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon1.png" alt="Icon 1" /&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Button 2"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon2.png" alt="Icon 2" /&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Button 3"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon3.png" alt="Icon 3" /&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Button 4"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon4.png" alt="Icon 4" /&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				&lt;/div&gt;
+			</code>
+		</section>
+		<section class="card z1">
+			<h1>App bars</h1>
+			<p>An element (usually a <code>&lt;header&gt;</code>) with the <code>appBar</code> class will be styled as an app bar&mdash;fixed to the top of the page, and set to be 64px tall on larger screens and 56px tall on smaller screens.  An app bar can be a toolbar as well by adding <code>role="toolbar"</code>.  A depth class can be added to visually raise button the app bar above other content (see <a href="#depth">Depth</a> below).</p>
+			<div class="col">
+				[See the app bar at the top of the screen for an example.]
+			</div>
+			<code class="col">
+				&lt;header role="toolbar" class="appBar"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button style="float: right;" title="Button 3"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon3.png" alt="Icon 3" /&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button style="float: right;" title="Button 2"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon2.png" alt="Icon 2" /&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button style="float: right;" title="Button 1"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon1.png" alt="Icon 1" /&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Title text
+				<br />
+				<br />
+				&lt;/header&gt;
+			</code>
+		</section>
+		<section class="card z1">
+			<h1>Cards</h1>
+			<p>An element with the <code>card</code> class will be styled as a paper card.  Add a depth class to determine how high to visually raise the card (see <a href="#depth">Depth</a> below).</p>
+			<div class="col">
+				<div class="card z1" style="width: 192px; height: 192px;"></div>
+			</div>
+			<code class="col">
+				&lt;div class="card z1" style="width: 192px; height: 192px;"&gt;&lt;/div&gt;
+			</code>
+		</section>
+		
 		<br />
-		<input type="checkbox" />
-		<input type="checkbox" checked="checked" />
-		<input type="checkbox" disabled="disabled" />
-		<input type="checkbox" checked="checked" disabled="disabled" />
-		<br />
-		<select>
-			<option>select</option>
-			<option>Bacon</option>
-			<option>Ipsum</option>
-			<option>Dolor</option>
-			<option>Sit</option>
-			<option>Amet</option>
-		</select>
-		<select disabled="disabled">
-			<option>select</option>
-		</select>
-		<br />
-		<input type="text" placeholder="input[type=&quot;text&quot;]" />
-		<input type="text" placeholder="input[type=&quot;text&quot;]" disabled="disabled" />
-		<br /><br />
-		<input type="range" min="0" max="10" value="5" />
-		<input type="range" min="0" max="10" value="5" disabled="disabled" />
-		<br /><br />
-		<progress value="0.5"></progress>
-		<br /><br />
-		<ul class="list">
-			<li>.list > li</li>
-			<li>.list > li</li>
-			<li><button style="width: 100%; width: calc(100% + 32px);">.list > li > button</button></li>
-			<li><button style="width: 100%; width: calc(100% + 32px);">.list > li > button</button></li>
-		</ul>
-		<br />
-		<div role="toolbar">
-			.toolbar
-			<button title=".toolbar > button">
-				<img src="demo_icons/toolbar1.png" alt="Icon" />
-			</button>
-			<button title=".toolbar > button">
-				<img src="demo_icons/toolbar2.png" alt="Icon" />
-			</button>
-			<button title=".toolbar > button">
-				<img src="demo_icons/toolbar3.png" alt="Icon" />
-			</button>
-			<button title=".toolbar > button">
-				<img src="demo_icons/toolbar4.png" alt="Icon" />
-			</button>
-		</div>
-		<br />
-		<div class="card z1" style="width: 256px;">
-			.card z1
-		</div>
-		<br />
-		<div class="card z2" style="width: 256px;">
-			.card z2
-		</div>
-		<br />
-		<div class="card z3" style="width: 256px;">
-			.card z3
-		</div>
-		<br />
-		<div class="card z4" style="width: 256px;">
-			.card z4
-		</div>
-		<br />
-		<div class="card z5" style="width: 256px;">
-			.card z5
-		</div>
-		<br />
+		<h1 id="depth">Depth</h1>
+		<p>Adding the <code>material-depth.css</code> style sheet enables depth classes <code>z1</code> through <code>z5</code>, which add shadows to elements.</p>
+		<section class="card z1">
+			<h1>Depth classes</h1>
+			<p>An element with any of the five z-depth classes will have a shadow applied to it.  A button with a depth class applied will function as a raised button (see <a href="#elements">Elements</a> above).</p>
+			<div class="col">
+				<div class="card z1" style="width: 256px;">
+					z = 1
+				</div>
+				<br />
+				<div class="card z2" style="width: 256px;">
+					z = 2
+				</div>
+				<br />
+				<div class="card z3" style="width: 256px;">
+					z = 3
+				</div>
+				<br />
+				<div class="card z4" style="width: 256px;">
+					z = 4
+				</div>
+				<br />
+				<div class="card z5" style="width: 256px;">
+					z = 5
+				</div>
+			</div>
+			<code class="col">
+				&lt;div class="card z1" style="width: 256px;"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;z = 1
+				<br />
+				&lt;/div&gt;
+				<br />
+				<br />
+				&lt;div class="card z2" style="width: 256px;"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;z = 2
+				<br />
+				&lt;/div&gt;
+				<br />
+				<br />
+				&lt;div class="card z3" style="width: 256px;"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;z = 3
+				<br />
+				&lt;/div&gt;
+				<br />
+				<br />
+				&lt;div class="card z4" style="width: 256px;"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;z = 4
+				<br />
+				&lt;/div&gt;
+				<br />
+				<br />
+				&lt;div class="card z5" style="width: 256px;"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;z = 5
+				<br />
+				&lt;/div&gt;
+			</code>
+		</section>
 	</body>
 </html>
 
