@@ -210,12 +210,16 @@ body {
 			   -moz-box-shadow: none;
 			        box-shadow: none;
 		}
-			
 			.list li button:hover,
 			.list li *[role="button"]:hover,
 			.list li input[type="button"]:hover,
 			.list li input[type="submit"]:hover,
-			.list li input[type="reset"]:hover {
+			.list li input[type="reset"]:hover,
+			.list li button:focus,
+			.list li *[role="button"]:focus,
+			.list li input[type="button"]:focus,
+			.list li input[type="submit"]:focus,
+			.list li input[type="reset"]:focus {
 				background-color: #f2f2f2;
 				background-color: rgba(0, 0, 0, 0.05);
 			}
