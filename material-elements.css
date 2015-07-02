@@ -476,6 +476,7 @@ input[type="number"],
 textarea {
 	-webkit-appearance: none;
 	   -moz-appearance: none;
+	        appearance: none;
 	
 	padding: 4px 0;
 	
@@ -484,6 +485,9 @@ textarea {
 	border-width: 0 0 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #757575;
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	        border-radius: 0;
 	outline: 0 none transparent;
 }
 textarea {
