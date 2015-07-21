@@ -1,11 +1,13 @@
-/* Base Material styles for elements.
- * Part of the MaterialZ CSS library.
- * Written by Zachary Yaro.
- * https://github.com/zmyaro/materialz
+/* Base Material styles for elements
+ * Part of the MaterialZ CSS library
+ *
+ * Copyright 2015 Zachary Yaro
+ * Released under the MIT license
+ * http://materialz.zmyaro.com/LICENSE.txt
  */
 
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Roboto+Mono:400italic,400|Roboto:400,400italic,500,500italic,700,700italic);
+@import url(//fonts.googleapis.com/css?family=Roboto+Mono:400italic,400|Roboto:400,400italic,500,500italic,700,700italic);
 
 ::selection {
 	background-color: #40c4ff;
