@@ -359,12 +359,13 @@ progress.circular::after,
 	body {
 		padding-top: 72px; /* 56px toolbar + 16px padding */
 	}
+	[role="toolbar"],
 	.appBar {
 		height: 56px;
-		padding: 12px;
+		padding: 16px;
 	}
 		.appBar > [role="toolbar"] {
-			margin: -12px;
+			margin: -16px;
 		}
 }
 
