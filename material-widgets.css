@@ -102,7 +102,6 @@ body {
 	top: 0px;
 	left: 0px;
 	right: 0px;
-	height: 64px;
 	
 	padding: 20px 16px;
 	font-size: 20px;
@@ -361,7 +360,6 @@ progress.circular::after,
 	}
 	[role="toolbar"],
 	.appBar {
-		height: 56px;
 		padding: 16px;
 	}
 		.appBar > [role="toolbar"] {
