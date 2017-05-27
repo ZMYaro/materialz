@@ -91,6 +91,7 @@ body {
 		[role="toolbar"] input[type="reset"] [role="img"] {
 			height: 24px;
 			margin: -5px 2px;
+			pointer-events: none;
 		}
 
 .appBar { /* the top action bar should be a <header> element */
