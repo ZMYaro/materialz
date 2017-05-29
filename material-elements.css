@@ -130,36 +130,36 @@ select[size="1"] {
 		text-overflow: '';
 	}
 	button:not(:disabled):hover,
-	[role="button"]:not(:disabled):hover,
-	input[type="button"]:not(:disabled):hover,
-	input[type="submit"]:not(:disabled):hover,
-	input[type="reset"]:not(:disabled):hover,
-	select:not(:disabled):hover,
-	select[size="1"]:not(:disabled):hover,
 	button:focus,
+	[role="button"]:not(:disabled):hover,
 	[role="button"]:focus,
+	input[type="button"]:not(:disabled):hover,
 	input[type="button"]:focus,
+	input[type="submit"]:not(:disabled):hover,
 	input[type="submit"]:focus,
+	input[type="reset"]:not(:disabled):hover,
 	input[type="reset"]:focus,
+	select:not([size]):not(:disabled):hover,
 	select:not([size]):focus,
+	select[size="1"]:not(:disabled):hover,
 	select[size="1"]:focus {
 		background-color: #e2e3e3;
 		background-color: rgba(128, 128, 128, 0.2);
 	}
 	/* The “active” class is used to force the appearance of the active/pressed state */
 	button:not(:disabled):active,
-	[role="button"]:not(:disabled):active,
-	input[type="button"]:not(:disabled):active,
-	input[type="submit"]:not(:disabled):active,
-	input[type="reset"]:not(:disabled):active,
-	select:not([size]):not(:disabled):active,
-	select[size="1"]:not(:disabled):active,
 	button:not(:disabled).active,
+	[role="button"]:not(:disabled):active,
 	[role="button"]:not(:disabled).active,
+	input[type="button"]:not(:disabled):active,
 	input[type="button"]:not(:disabled).active,
+	input[type="submit"]:not(:disabled):active,
 	input[type="submit"]:not(:disabled).active,
+	input[type="reset"]:not(:disabled):active,
 	input[type="reset"]:not(:disabled).active,
+	select:not([size]):not(:disabled):active,
 	select:not([size]):not(:disabled).active,
+	select[size="1"]:not(:disabled):active,
 	select[size="1"]:not(:disabled).active {
 		background-color: #c4c5c5;
 		background-color: rgba(128, 128, 128, 0.4);
