@@ -263,6 +263,8 @@ body {
 	margin: 8px;
 	padding: 16px;
 	vertical-align: top;
+	
+	overflow: hidden;
 }
 
 progress.circular,
