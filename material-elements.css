@@ -25,6 +25,14 @@ body {
 	background-color: #fafafa;
 }
 
+/* --------======== BORDERS ========--------*/
+hr {
+	border-width: 1px 0 0;
+}
+fieldset {
+	border-width: 1px;
+}
+
 /* --------======== MONOSPACE ELEMENTS ========--------*/
 code,
 kbd,
@@ -273,7 +281,7 @@ input[type="radio"] {
 			     -o-transition-delay: 0, 0.13s, 0.13s;
 			        transition-delay: 0, 0.13s;
 			
-			color: #40c4ff;
+			color: inherit;
 			-webkit-box-shadow: inset 0 0 0 10px;
 			   -moz-box-shadow: inset 0 0 0 10px;
 			        box-shadow: inset 0 0 0 10px;
