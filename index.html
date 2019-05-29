@@ -90,15 +90,20 @@
 	</head>
 	<body>
 		<header role="toolbar" class="appBar z2">
-			<button style="float: right;" title="Button 3">
-				<img src="demo_icons/appbar3.svg" alt="Button 3" />
-			</button>
-			<button style="float: right;" title="Button 2">
-				<img src="demo_icons/appbar2.png" alt="Button 2" />
-			</button>
-			<button style="float: right;" title="Button 1">
-				<img src="demo_icons/appbar1.png" alt="Button 1" />
-			</button>
+			<span style="float: right;">
+				<button title="Action 1">
+					<img src="demo_icons/appbar1.png" alt="Action 1" />
+				</button>
+				<button title="Action 2">
+					<img src="demo_icons/appbar2.png" alt="Action 2" />
+				</button>
+				<button title="Action 3">
+					<img src="demo_icons/appbar3.svg" alt="Action 3" />
+				</button>
+				<button title="Button 4">
+					Action 4
+				</button>
+			</span>
 			MaterialZ
 		</header>
 		<p>
@@ -297,35 +302,44 @@
 			<p>An element with <code>role="toolbar"</code> will have its buttons styled as paper toolbar buttons.  Icons will be resized to 24px, so SVGs and 2x PNGs may be used.</p>
 			<div class="col">
 				<div role="toolbar">
-					<button title="Button 1">
-						<img src="demo_icons/toolbar1.png" alt="Button 1" />
+					<button title="Action 1">
+						<img src="demo_icons/toolbar1.png" alt="Action 1" />
 					</button>
-					<button title="Button 2">
-						<img src="demo_icons/toolbar2.png" alt="Button 2" />
+					<button title="Action 2">
+						<img src="demo_icons/toolbar2.png" alt="Action 2" />
 					</button>
-					<button title="Button 3">
-						<img src="demo_icons/toolbar3.svg" alt="Button 3" />
+					<button title="Action 3">
+						<img src="demo_icons/toolbar3.svg" alt="Action 3" />
+					</button>
+					<button title="Action 4">
+						Action 4
 					</button>
 				</div>
 			</div>
 			<code class="col">
 				&lt;div role="toolbar"&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Button 1"&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Action 1"&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon1.png" alt="Icon 1" /&gt;
-				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
-				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Button 2"&gt;
-				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon2.png" alt="Icon 2" /&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon1.png" alt="Action 1" /&gt;
 				<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Button 3"&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Action 2"&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon3.svg" alt="Icon 3" /&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon2.png" alt="Action 2" /&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Action 3"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon3.svg" alt="Action 3" /&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Action 4"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action 4
 				<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
 				<br />
@@ -341,27 +355,36 @@
 			<code class="col">
 				&lt;header role="toolbar" class="appBar"&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button style="float: right;" title="Button 3"&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span style="float: right;"&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon3.svg" alt="Icon 3" /&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Action 1"&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon1.png" alt="Action 1" /&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button style="float: right;" title="Button 2"&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon2.png" alt="Icon 2" /&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Action 2"&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon2.png" alt="Action 2" /&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;button style="float: right;" title="Button 1"&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon1.png" alt="Icon 1" /&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Action 3"&gt;
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="icon3.svg" alt="Action 3" /&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button title="Action 4"&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action 4
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
 				<br />
 				<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;Title text
-				<br />
 				<br />
 				&lt;/header&gt;
 			</code>
