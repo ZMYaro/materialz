@@ -88,8 +88,8 @@
 			<script type="text/javascript">
 				document.createElement('header');
 				document.createElement('section');
-				document.write('It worked!');
 			</script>
+			<link rel="stylesheet" type="text/css" href="fix-old-ie.css" />
 			<style type="text/css">
 				header,
 				section {
@@ -97,6 +97,12 @@
 				}
 			</style>
 		<![endif]--> 
+		
+		<script type="text/javascript">
+			if (navigator.userAgent.match(/Version\/[1-5]\..* Safari\//)) {
+				document.write('<link rel="stylesheet" type="text/css" href="fix-old-safari.css" />');
+			}
+		</script>
 		
 		<script type="text/javascript" src="material-touch.js"></script>
 		
@@ -146,6 +152,14 @@
 		</section>
 		<section class="section card z1">
 			<h1>Buttons</h1>
+			<!--[if lt IE 9]>
+				<p>
+					(Older IE has a bug with raised element inside of raised elements, so you need to toggle the elevation of this section to see the raised buttons.
+					<button onclick="parentElement.parentElement.className = (parentElement.parentElement.className === 'section card z1' ? 'section card' : 'section card z1');">
+						Toggle
+					</button>)
+				</p>
+			<![endif]--> 
 			<p>Any <code>&lt;button&gt;</code> element, any <code>&lt;input&gt;</code> with <code>type</code> set to <code>button</code>, <code>submit</code>, or <code>reset</code>, or any other element with <code>role="button"</code> will automatically be styled as a flat paper button.  Adding a depth class will turn it into a raised button (see <a href="#depth">Depth</a> below).</p>
 			<div class="col">
 				<button>Button</button>
