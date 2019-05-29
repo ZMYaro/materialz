@@ -1,0 +1,96 @@
+/* Base Material styles for elements in IE < 9
+ * These are more difficult to theme, but will improve the appearances of some elements.
+ * Part of the MaterialZ CSS library
+ *
+ * Copyright 2015 Zachary Yaro
+ * Released under the MIT license
+ * http://materialz.zmyaro.com/LICENSE.txt
+ */
+
+@charset "UTF-8";
+
+	button:hover,
+	button:focus,
+	[role="button"]:hover,
+	[role="button"]:focus,
+	input[type="button"]:hover,
+	input[type="button"]:focus,
+	input[type="submit"]:hover,
+	input[type="submit"]:focus,
+	input[type="reset"]:hover,
+	input[type="reset"]:focus,
+	select:hover,
+	select:focus {
+		background-color: #e2e3e3;
+		background-color: rgba(128, 128, 128, 0.2);
+	}
+	/* The “active” class is used to force the appearance of the active/pressed state */
+	button:active,
+	button.active,
+	[role="button"]:active,
+	[role="button"].active,
+	input[type="button"]:active,
+	input[type="button"].active,
+	input[type="submit"]:active,
+	input[type="submit"].active,
+	input[type="reset"]:active,
+	input[type="reset"].active,
+	select:active,
+	select.active {
+		background-color: #c4c5c5;
+		background-color: rgba(128, 128, 128, 0.4);
+	}
+
+/* --------======== DEPTH SHADOWS ========-------- */
+.z1 {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.26) 0 2px 5px 0, rgba(0, 0, 0, 0.16) 0 2px 10px 0;
+	   -moz-box-shadow: rgba(0, 0, 0, 0.26) 0 2px 5px 0, rgba(0, 0, 0, 0.16) 0 2px 10px 0;
+	        box-shadow: rgba(0, 0, 0, 0.26) 0 2px 5px 0, rgba(0, 0, 0, 0.16) 0 2px 10px 0;
+	    filter:  progid:DXImageTransform.Microsoft.Glow(Color=#b8b8b8,Strength=5);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Color=#b8b8b8,Strength=5)";
+}
+
+button.z1:hover,
+button.z1:focus,
+[role="button"].z1:hover,
+[role="button"].z1:focus,
+input[type="button"].z1:hover,
+input[type="button"].z1:focus,
+input[type="submit"].z1:hover,
+input[type="submit"].z1:focus,
+input[type="reset"].z1:hover,
+input[type="reset"].z1:focus {
+	-webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.23), 0 4px 15px 0 rgba(0, 0, 0, 0.175);
+	   -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.23), 0 4px 15px 0 rgba(0, 0, 0, 0.175);
+	        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.23), 0 4px 15px 0 rgba(0, 0, 0, 0.175);
+	    filter:  progid:DXImageTransform.Microsoft.Glow(Color=#b4b4b4,Strength=7);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Color=#b4b4b4,Strength=7)";
+}
+.z2,
+button.z1:active,
+button.z1.active,
+[role="button"].z1:active,
+[role="button"].z1.active,
+input[type="button"].z1:active,
+input[type="button"].z1.active,
+input[type="submit"].z1:active,
+input[type="submit"].z1.active,
+input[type="reset"].z1:active,
+input[type="reset"].z1.active {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 8px 17px 0, rgba(0, 0, 0, 0.19) 0 6px 20px 0;
+	   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 8px 17px 0, rgba(0, 0, 0, 0.19) 0 6px 20px 0;
+	        box-shadow: rgba(0, 0, 0, 0.2) 0 8px 17px 0, rgba(0, 0, 0, 0.19) 0 6px 20px 0;
+	    filter:  progid:DXImageTransform.Microsoft.Glow(Color=#b0b0b0,Strength=10);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Color=#b0b0b0,Strength=10)";
+}
+button.z1:disabled,
+[role="button"].z1.disabled,
+input[type="button"].z1.disabled,
+input[type="submit"].z1.disabled,
+input[type="reset"].z1.disabled {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0, rgba(0, 0, 0, 0.14) 0 2px 5px 0;
+	   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0, rgba(0, 0, 0, 0.14) 0 2px 5px 0;
+	        box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0, rgba(0, 0, 0, 0.14) 0 2px 5px 0;
+	    filter:  progid:DXImageTransform.Microsoft.Glow(Color=#b8b8b8,Strength=5);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Color=#b8b8b8,Strength=5)";
+}
