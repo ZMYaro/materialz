@@ -45,6 +45,10 @@
 				margin: 16px 0;
 			}
 			
+			nav ul {
+				list-style-type: '\2193';
+			}
+			
 			.category-header,
 			.section {
 				margin: 0 auto;
@@ -103,6 +107,18 @@
 			if (navigator.userAgent.match(/Version\/[1-5]\..* Safari\//)) {
 				document.write('<link rel="stylesheet" type="text/css" href="fix-old-safari.css" />');
 			}
+			
+			window.addEventListener('hashchange', function (ev) {
+				// If the browser supports JavaScript, correct for the
+				// app bar when scrolling to an element.
+				var APP_BAR_HEIGHT = 64;
+				var anchor = document.querySelector('a[name="' + location.hash.substring(1) + '"]');
+				if (anchor) {
+					anchor.scrollIntoView(true);
+					window.scrollBy(0, -APP_BAR_HEIGHT);
+					ev.preventDefault();
+				}
+			});
 		</script>
 		
 		<script type="text/javascript" src="material-touch.js"></script>
@@ -130,11 +146,42 @@
 		<p>
 			<a href="https://github.com/zmyaro/materialz" target="_blank">MaterialZ</a> is a CSS library created by <a href="https://zmyaro.com" target="_blank">Zachary Yaro</a> that implements the <a href="https://material.io/design/introduction/" target="_blank">Material Design spec</a>.  Simply adding the stylesheets introduces a base coat of Material theming to any site.  With a few tweaks, other widgets, such as app bars, lists, and cards, can be added.
 		</p>
+		<nav>
+			<ul>
+				<li>
+					<a href="#elements">Elements</a>
+					<ul>
+						<li><a href="#headings">Headings</a></li>
+						<li><a href="#kbd">Keyboard shortcuts</a></li>
+						<li><a href="#buttons">Buttons</a></li>
+						<li><a href="#radios">Radio buttons</a></li>
+						<li><a href="#checkboxes">Checkboxes</a></li>
+						<li><a href="#selects">Drop-down menus</a></li>
+						<li><a href="#textfields">Text fields</a></li>
+						<li><a href="#sliders">Sliders</a></li>
+						<li><a href="#progress">Progress bars</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#widgets">Widgets</a>
+					<ul>
+						<li><a href="#lists">Lists</a></li>
+						<li><a href="#toolbars">Toolbars</a></li>
+						<li><a href="#appbars">App bars</a></li>
+						<li><a href="#cards">Cards</a></li>
+						<li><a href="#circularprogress">Circular progress indicators</a></li>
+					</ul>
+				</li>
+				<li><a href="#depth">Depth</a></li>
+			</ul>
+		</nav>
+		<a name="elements"></a>
 		<br />
 		<header class="category-header">
-			<h1 id="elements">Elements</h1>
+			<h1>Elements</h1>
 			<p>Adding the <code>material-elements.css</code> style sheet will automatically style the following elements.  That style sheet works based on standard HTML elements and attributes, so it can work without adding additional classes other frameworks without CSS classes clashing.</p>
 		</header>
+		<a name="headings"></a>
 		<section class="section card z1">
 			<h1>Headings</h1>
 			<p>The top three levels of headings have been styled according to the heading, title, and subhead styles in the <a href="http://www.google.com/design/spec/style/typography.html#typography-styles" target="_blank">Material Design guidelines</a>.</p>
@@ -151,6 +198,7 @@
 				&lt;h3&gt;Subhead&lt;/h3&gt;
 			</code>
 		</section>
+		<a name="kbd"></a>
 		<section class="section card z1">
 			<h1>Keyboard shortcuts</h1>
 			<p>While there is no official design spec, the <code>&lt;kbd&gt;</code> element has formatting similar to keyboard hints in some of Google's Material Design apps.</p>
@@ -161,6 +209,7 @@
 				Reload the page with &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;.
 			</code>
 		</section>
+		<a name="buttons"></a>
 		<section class="section card z1">
 			<h1>Buttons</h1>
 			<!--[if lt IE 9]>
@@ -206,6 +255,7 @@
 				&lt;div role="button" class="z1"&gt;Raised Div Button&lt;/div&gt;
 			</code>
 		</section>
+		<a name="radios"></a>
 		<section class="section card z1">
 			<h1>Radio buttons</h1>
 			<p>An <code>&lt;input type="radio" /&gt;</code> will be styled and animated as a paper radio button.  (Note this is only fully supported in WebKit- and Blink-based browsers, such as Chrome and Safari.)</p>
@@ -225,6 +275,7 @@
 				&lt;input type="radio" name="radioset2" checked="checked" disabled="disabled" /&gt;
 			</code>
 		</section>
+		<a name="checkboxes"></a>
 		<section class="section card z1">
 			<h1>Checkboxes</h1>
 			<p>An <code>&lt;input type="checkbox" /&gt;</code> will be styled and animated as a paper checkbox.  (Note this is only fully supported in WebKit- and Blink-based browsers, such as Chrome and Safari.)</p>
@@ -244,6 +295,7 @@
 				&lt;input type="checkbox" checked="checked" disabled="disabled" /&gt;
 			</code>
 		</section>
+		<a name="selects"></a>
 		<section class="section card z1">
 			<h1>Drop-down menus</h1>
 			<p>A simple <code>&lt;select&gt;</code> element will be styled as a paper drop-down menu.</p>
@@ -272,6 +324,7 @@
 				&lt;/select&gt;
 			</code>
 		</section>
+		<a name="textfields"></a>
 		<section class="section card z1">
 			<h1>Text fields</h1>
 			<p>Any <code>&lt;input /&gt;</code> with <code>type</code> set to <code>search</code>, <code>password</code>, <code>email</code>, <code>url</code>, or <code>number</code> will be styled as a paper text field.</p>
@@ -282,6 +335,7 @@
 				&lt;input type="text" placeholder="Text field" /&gt;
 			</code>
 		</section>
+		<a name="sliders"></a>
 		<section class="section card z1">
 			<h1>Sliders</h1>
 			<p>Any <code>&lt;input type="range" /&gt;</code> will be styled as a paper slider.</p>
@@ -295,6 +349,7 @@
 				&lt;input type="range" disabled="disabled" /&gt;
 			</code>
 		</section>
+		<a name="progress"></a>
 		<section class="section card z1">
 			<h1>Progress bars</h1>
 			<p>Any <code>&lt;progress&gt;</code> element will be styled as a paper progress bar.</p>
@@ -305,12 +360,13 @@
 				&lt;progress value="0.5"&gt;&lt;/progress&gt;
 			</code>
 		</section>
-		
+		<a name="widgets"></a>
 		<br />
 		<header class="category-header">
-			<h1 id="widgets">Widgets</h1>
+			<h1>Widgets</h1>
 			<p>Adding the <code>material-widgets.css</code> style sheet will allow the following widgets to be added.</p>
 		</header>
+		<a name="lists"></a>
 		<section class="section card z1">
 			<h1>Lists</h1>
 			<p>An <code>&lt;ol&gt;</code> or <code>&lt;ul&gt;</code> with the <code>list</code> class will have its list items and buttons styled.</p>
@@ -336,6 +392,7 @@
 				&lt;/ul&gt;
 			</code>
 		</section>
+		<a name="toolbars"></a>
 		<section class="section card z1">
 			<h1>Toolbars</h1>
 			<p>An element with <code>role="toolbar"</code> will have its buttons styled as paper toolbar buttons.  Icons will be resized to 24px, so SVGs and 2x PNGs may be used.</p>
@@ -385,6 +442,7 @@
 				&lt;/div&gt;
 			</code>
 		</section>
+		<a name="appbars"></a>
 		<section class="section card z1">
 			<h1>App bars</h1>
 			<p>An element (usually a <code>&lt;header&gt;</code>) with the <code>appBar</code> class will be styled as an app bar&mdash;fixed to the top of the page, and set to be 64px tall on larger screens and 56px tall on smaller screens.  An app bar can be a toolbar as well by adding <code>role="toolbar"</code>.  A depth class can be added to visually raise button the app bar above other content (see <a href="#depth">Depth</a> below).</p>
@@ -428,6 +486,7 @@
 				&lt;/header&gt;
 			</code>
 		</section>
+		<a name="cards"></a>
 		<section class="section card z1">
 			<h1>Cards</h1>
 			<p>An element with the <code>card</code> class will be styled as a paper card.  Add a depth class to determine how high to visually raise the card (see <a href="#depth">Depth</a> below).</p>
@@ -438,6 +497,7 @@
 				&lt;div class="card z1" style="width: 192px; height: 192px;"&gt;&lt;/div&gt;
 			</code>
 		</section>
+		<a name="circularprogress"></a>
 		<section class="section card z1">
 			<h1>Circular progress indicators</h1>
 			<p>A progress (or <code>role="progress"</code>) element with the <code>circular</code> class will be styled as a circular progress indicator. Change the <code>color</code> (or <code>border-top-color</code>) to change the color of the spinner.</p>
@@ -457,10 +517,10 @@
 				&lt;progress class="circular" style="border-top-color: #2196f3;"&gt;&lt;/progress&gt;
 			</code>
 		</section>
-		
+		<a name="depth"></a>
 		<br />
 		<header class="category-header">
-			<h1 id="depth">Depth</h1>
+			<h1>Depth</h1>
 			<p>Adding the <code>material-depth.css</code> style sheet enables depth classes <code>z1</code> through <code>z5</code>, which add shadows to elements.</p>
 		</header>
 		<section class="section card z1">
