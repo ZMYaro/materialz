@@ -28,6 +28,7 @@ body {
 	        transition-property: padding;
 }
 
+/* --------======== TOOLBARS ========-------- */
 [role="toolbar"] {
 	padding: 20px 16px;
 	font-size: 20px;
@@ -72,7 +73,8 @@ body {
 			pointer-events: none;
 		}
 
-.appBar { /* the top action bar should be a <header> element */
+/* --------======== APP BARS ========-------- */
+.appBar { /* Recommendation: the top action bar should be a <header> element */
 	display: block;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -153,7 +155,20 @@ body {
 		.appBar[role="toolbar"] input[type="reset"]:not(:disabled).active {
 			background-color: rgba(255,255,255,0.13);
 		}
+@media (max-width: 600px) {
+	body {
+		padding-top: 72px; /* 56px toolbar + 16px padding */
+	}
+	[role="toolbar"],
+	.appBar {
+		padding: 16px;
+	}
+		.appBar > [role="toolbar"] {
+			margin: -16px;
+		}
+}
 
+/* --------======== LISTS ========-------- */
 .list {
 	list-style-type: none;
 	margin: 0;
@@ -198,6 +213,7 @@ body {
 			        box-shadow: none;
 		}
 
+/* --------======== CARDS ========-------- */
 .card {
 	background-color: white;
 	-webkit-border-radius: 2px;
@@ -215,6 +231,7 @@ body {
 	overflow: hidden;
 }
 
+/* --------======== CIRCULAR PROGRESS INDICATORS ========-------- */
 progress.circular,
 progress.circular::before,
 progress.circular::after,
@@ -222,12 +239,12 @@ progress.circular::after,
 [role="progressbar"].circular::before,
 [role="progressbar"].circular::after {
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 	
 	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
+	   -moz-border-radius: 50%;
+	        border-radius: 50%;
 	
 	background: transparent;
 	
@@ -235,20 +252,20 @@ progress.circular::after,
 	border-top-color: currentColor;
 	
 	-webkit-animation-iteration-count: infinite;
-	-moz-animation-iteration-count: infinite;
-	-ms-animation-iteration-count: infinite;
-	-o-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
+	   -moz-animation-iteration-count: infinite;
+	    -ms-animation-iteration-count: infinite;
+	     -o-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
-	-moz-animation-timing-function: linear;
-	-ms-animation-timing-function: linear;
-	-o-animation-timing-function: linear;
-	animation-timing-function: linear;
+	   -moz-animation-timing-function: linear;
+	    -ms-animation-timing-function: linear;
+	     -o-animation-timing-function: linear;
+	        animation-timing-function: linear;
 	-webkit-animation-duration: 1.5s;
-	-moz-animation-duration: 1.5s;
-	-ms-animation-duration: 1.5s;
-	-o-animation-duration: 1.5s;
-	animation-duration: 1.5s;
+	   -moz-animation-duration: 1.5s;
+	    -ms-animation-duration: 1.5s;
+	     -o-animation-duration: 1.5s;
+	        animation-duration: 1.5s;
 }
 	progress.circular,
 	[role="progressbar"].circular {
@@ -306,18 +323,6 @@ progress.circular::after,
 		background: transparent;
 	}
 
-@media (max-width: 600px) {
-	body {
-		padding-top: 72px; /* 56px toolbar + 16px padding */
-	}
-	[role="toolbar"],
-	.appBar {
-		padding: 16px;
-	}
-		.appBar > [role="toolbar"] {
-			margin: -16px;
-		}
-}
 
 @-webkit-keyframes materialz-circular-progress-part1 {
 	0% {
