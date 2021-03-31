@@ -6,7 +6,7 @@ MaterialZ is a CSS library that implements [Google's Material Design guidelines]
 ## Material-ize your site
 If you want Material-/Paper-themed HTML elements on your page, you just need to include “material-elements.css”, which styles most basic HTML elements.
 
-[See examples and code snippets at materialz.zmyaro.com/#elements →](https://materialz.zmyaro.com/#elements)
+[See examples and code snippets at materialz.dev/#elements →](https://materialz.dev/#elements)
 
 ## Add Material widgets
 You can use widgets such as action bars, lists, and cards by adding “material-widgets.css” and specifying classes:
@@ -18,12 +18,12 @@ You can use widgets such as action bars, lists, and cards by adding “material-
 
 Note: adding the widgets stylesheet will automatically add padding to the `body` for the default app bar size.
 
-[See examples and code snippets at materialz.zmyaro.com/#widgets →](https://materialz.zmyaro.com/#widgets)
+[See examples and code snippets at materialz.dev/#widgets →](https://materialz.dev/#widgets)
 
 ## Add depth
 You can add shadows to elements with classes `z1`-`z5`.  These are best used with `<button>`s (e.g., `<button class="z1">` for a raised button), `.card`s (e.g., `<div class="card z2">`), and `.appBar`s (e.g., `<header class="appBar z3">`).
 
-[See examples and code snippets at materialz.zmyaro.com/#depth →](https://materialz.zmyaro.com/#depth)
+[See examples and code snippets at materialz.dev/#depth →](https://materialz.dev/#depth)
 
 ## Make it work on older mobile browsers
 One great use of MaterialZ is to make mobile web sites look like native Android 5+ apps.  MaterialZ includes a script to make sure all widgets respond to touch properly in mobile WebKit (Mobile Safari, Android Browser, Chrome for Android).

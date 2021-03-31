@@ -3,7 +3,7 @@
  *
  * Copyright 2015-2020 Zachary Yaro
  * Released under the MIT license
- * https://materialz.zmyaro.com/LICENSE.txt
+ * https://materialz.dev/LICENSE.txt
  */
 
  (function () {
