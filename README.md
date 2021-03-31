@@ -6,7 +6,7 @@ MaterialZ is a CSS library that implements [Google's Material Design guidelines]
 ## Material-ize your site
 If you want Material-/Paper-themed HTML elements on your page, you just need to include “material-elements.css”, which styles most basic HTML elements.
 
-[See examples and code snippets at materialz.dev/#elements →](https://materialz.dev/#elements)
+[See all elements and example code at materialz.dev/#elements →](https://materialz.dev/#elements)
 
 ## Add Material widgets
 You can use widgets such as action bars, lists, and cards by adding “material-widgets.css” and specifying classes:
@@ -18,15 +18,15 @@ You can use widgets such as action bars, lists, and cards by adding “material-
 
 Note: adding the widgets stylesheet will automatically add padding to the `body` for the default app bar size.
 
-[See examples and code snippets at materialz.dev/#widgets →](https://materialz.dev/#widgets)
+[See all widgets and example code at materialz.dev/#widgets →](https://materialz.dev/#widgets)
 
 ## Add depth
 You can add shadows to elements with classes `z1`-`z5`.  These are best used with `<button>`s (e.g., `<button class="z1">` for a raised button), `.card`s (e.g., `<div class="card z2">`), and `.appBar`s (e.g., `<header class="appBar z3">`).
 
-[See examples and code snippets at materialz.dev/#depth →](https://materialz.dev/#depth)
+[See demo and example code at materialz.dev/#depth →](https://materialz.dev/#depth)
 
 ## Make it work on older mobile browsers
-One great use of MaterialZ is to make mobile web sites look like native Android 5+ apps.  MaterialZ includes a script to make sure all widgets respond to touch properly in mobile WebKit (Mobile Safari, Android Browser, Chrome for Android).
+One great use of MaterialZ is to make mobile web apps look like native Android 5+ apps.  MaterialZ includes a script to make sure all widgets respond to touch properly in mobile WebKit (Mobile Safari, AOSP Browser, earlier Chrome for Android) by overriding the default tap delay.
 * Make sure you include the “material-touch.js” file.
 * Add a script tag to your page: `<script type="text/javascript" src="material-touch.js"></script>`.
 
@@ -34,7 +34,7 @@ One great use of MaterialZ is to make mobile web sites look like native Android 
 You can add the `fix-*.css` stylesheets to fix certain issues ith older browsers, such as IE < 9 and Safari < 6, if you need to support those, however you should only load those stylesheets in those browsers, as they include overrides for better styles used in newer browsers.
 
 ## The Roboto Font
-material-elements.css imports basic Roboto and Roboto Mono by default.  If you need more weights or character sets, you can load them through [Google Web Fonts](https://fonts.google.com/specimen/Roboto).
+`material-elements.css` imports basic Roboto and Roboto Mono by default.  If you need more weights or character sets, you can load them through [Google Web Fonts](https://fonts.google.com/specimen/Roboto).
 
 ## Known issues
 * Certain form elements (checkboxes, radio buttons) are only properly themed in WebKit-derived browsers (e.g. Safari, Chrome, new Edge, newer Opera) and newer versions of Firefox and partially themed in Presto (older Opera) and the latest versions of Trident/EdgeHTML (IE10+, Edge Legacy).
