@@ -226,6 +226,69 @@ input[type="checkbox"] {
 		border-color: #40c4ff;
 		color: #40c4ff;
 	}
+	input[type="radio"]::before,
+	input[type="checkbox"]::before {
+		content: '';
+		
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		
+		-webkit-border-radius: 50%;
+		   -moz-border-radius: 50%;
+		        border-radius: 50%;
+		
+		background-color: rgba(128, 128, 128, 0);
+		-webkit-box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 0px,
+		                    rgba(128, 128, 128, 0.1) 0px 0px 0px 0px;
+		   -moz-box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 0px,
+		                    rgba(128, 128, 128, 0.1) 0px 0px 0px 0px;
+		        box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 0px,
+		                    rgba(128, 128, 128, 0.1) 0px 0px 0px 0px;
+		
+		-webkit-transition-duration: 0.15s;
+		   -moz-transition-duration: 0.15s;
+		    -ms-transition-duration: 0.15s;
+		     -o-transition-duration: 0.15s;
+		        transition-duration: 0.15s;
+		-webkit-transition-timing-function: linear;
+		   -moz-transition-timing-function: linear;
+		    -ms-transition-timing-function: linear;
+		     -o-transition-timing-function: linear;
+		        transition-timing-function: linear;
+		-webkit-transition-property: background-color, -webkit-box-shadow, box-shadow;
+		   -moz-transition-property: background-color,    -moz-box-shadow, box-shadow;
+		    -ms-transition-property: background-color,                     box-shadow;
+		     -o-transition-property: background-color,                     box-shadow;
+		        transition-property: background-color,                     box-shadow;
+	}
+		input[type="radio"]:not(:disabled):hover::before,
+		input[type="radio"]:not(:disabled):focus::before,
+		input[type="checkbox"]:not(:disabled):hover::before,
+		input[type="checkbox"]:not(:disabled):focus::before {
+			background-color: rgba(128, 128, 128, 0.1);
+			-webkit-box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 13px,
+			                    rgba(128, 128, 128, 0.1) 0px 0px 0px 0px;
+			   -moz-box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 13px,
+			                    rgba(128, 128, 128, 0.1) 0px 0px 0px 0px;
+			        box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 13px,
+			                    rgba(128, 128, 128, 0.1) 0px 0px 0px 0px;
+		}
+		input[type="radio"]:not(:disabled):active::before,
+		input[type="radio"]:not(:disabled).active::before,
+		input[type="checkbox"]:not(:disabled):active::before,
+		input[type="checkbox"]:not(:disabled).active::before {
+			background-color: rgba(128, 128, 128, 0.2);
+			-webkit-box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 13px,
+			                    rgba(128, 128, 128, 0.1) 0px 0px 0px 13px;
+			   -moz-box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 13px,
+			                    rgba(128, 128, 128, 0.1) 0px 0px 0px 13px;
+			        box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 13px,
+			                    rgba(128, 128, 128, 0.1) 0px 0px 0px 13px;
+		}
 input[type="radio"] {
 	width: 20px;
 	height: 20px;
