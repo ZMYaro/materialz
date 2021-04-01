@@ -432,10 +432,10 @@ input[type="checkbox"].switch {
 		    -ms-transition-duration: inherit;
 		     -o-transition-duration: inherit;
 		        transition-duration: inherit;
-		-webkit-transition-property: -webkit-box-shadow, -webkit-transform, box-shadow, transform;
-		   -moz-transition-property: -moz-box-shadow, -moz-transform, box-shadow, transform;
-		    -ms-transition-property: box-shadow, -ms-transform, transform;
-		     -o-transition-property: box-shadow, -o-transform, transform;
+		-webkit-transition-property: -webkit-box-shadow, box-shadow, -webkit-transform;
+		   -moz-transition-property: -moz-box-shadow, box-shadow, -moz-transform;
+		    -ms-transition-property: box-shadow, -ms-transform;
+		     -o-transition-property: box-shadow, -o-transform;
 		        transition-property: box-shadow, transform;
 	}
 		input[type="checkbox"].switch:not(:disabled):hover::after,
