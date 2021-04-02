@@ -1,6 +1,6 @@
 # MaterialZ
 
-MaterialZ is a CSS library that implements [Google's Material Design guidelines](http://google.com/design) in plain CSS.
+MaterialZ is a CSS library that implements [Google's Material Design guidelines](https://material.io/design/introduction) in plain CSS.
 
 
 ## Material-ize your site
