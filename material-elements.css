@@ -137,11 +137,11 @@ select {
 		min-width: 0;
 		position: relative;
 		background-color: transparent;
-		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAICAYAAACs/DyzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFRJREFUeNrUzzEKACAMA8AMPjw/rzoIUlqqTqYQ6JAMBwAcscfQzPBz1r0g5wYqwFsk10gJeIrkPlADVkj6siIwQzIqqgI9klnpd2ArgNEvdV2AAQCCQISyxDe1CAAAAABJRU5ErkJggg==);
-		background-size: 28px 4px;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAIAgMAAADCRZTUAAAACVBMVEUAAAAAAAAAAACDY+nAAAAAAnRSTlMAgJsrThgAAAAySURBVAjXY8hatWolAwxIrVq1BM5hW7VqApzDuGqVAwMcZAG1IDQBtSA0AbUgNCG0AAD8iAqhtDTiaAAAAABJRU5ErkJggg==);
+		background-size: 24px 4px;
 		background-position: right center;
 		background-repeat: no-repeat;
-		padding-right: 36px;
+		padding-right: 32px;
 		
 		/* Hide the default arrow in Gecko. */
 		text-indent: 0.01px;
