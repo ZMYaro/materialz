@@ -18,17 +18,15 @@
 		<link rel="stylesheet" type="text/css" href="material-elements.css" />
 		<link rel="stylesheet" type="text/css" href="material-widgets.css" />
 		<link rel="stylesheet" type="text/css" href="material-depth.css" />
+		<link rel="stylesheet" type="text/css" href="material-dark.css" media="(prefers-color-scheme: dark)" />
 		
 		<link rel="stylesheet" type="text/css" href="demo_fonts/roboto.css" />
 		
 		<style type="text/css">
-			body {
-				background-color: #f9f9f9;
-			}
-			
 			code {
 				padding: 2px 4px;
 				background-color: #dde3e6;
+				background-color: rgba(120, 142, 145, 0.25);
 				-webkit-border-radius: 2px;
 				   -moz-border-radius: 2px;
 				        border-radius: 2px;
@@ -189,6 +187,7 @@
 					</ul>
 				</li>
 				<li><a href="#depth">Depth</a></li>
+				<li><a href="#darktheme">Dark theme</a></li>
 			</ul>
 		</nav>
 		<a name="elements"></a>
@@ -505,7 +504,7 @@
 		<a name="cards"></a>
 		<section class="section card z1">
 			<h2>Cards</h2>
-			<p>An element with the <code>card</code> class will be styled as a paper card.  Add a depth class to determine how high to visually raise the card (see <a href="#depth">Depth</a> below).</p>
+			<p>An element with the <code>card</code> class will be styled as a paper card.  Add a <a href="#depth">depth</a> class to determine how high to visually raise the card.  (Each of these sections is a <code>&lt;section class="card"&gt;</code>.)</p>
 			<div class="col">
 				<div class="card z1" style="width: 192px; height: 192px;"></div>
 			</div>
@@ -573,7 +572,7 @@
 		</header>
 		<section class="section card z1">
 			<h2>Depth classes</h2>
-			<p>An element with any of the five z-depth classes will have a shadow applied to it.  A button with a depth class applied will function as a raised button (see <a href="#elements">Elements</a> above).</p>
+			<p>An element with any of the five z-depth classes will have a shadow applied to it.  A <a href="#buttons">button</a> with a depth class applied will function as a raised button.  A <a href="#cards">card</a> with a depth class applied will also be lightened as appropriate for its elevation in <a href="#darktheme">dark theme</a>.</p>
 			<div class="col">
 				<div class="card z1" style="width: 256px;">
 					z = 1
@@ -630,6 +629,23 @@
 				<br />
 				&lt;/div&gt;
 			</code>
+		</section>
+		<a name="darktheme"></a>
+		<br />
+		<header class="category-header">
+			<h1>Dark theme</h1>
+			<p>Adding the <code>material-dark.css</code> style sheet overrides the default (light) Material styles to standard Material dark theme.</p>
+		</header>
+		<section class="section card z1">
+			<h2>Dark theme setting</h2>
+			<p>The easiest way to let the user choose a theme is to add a <code>(prefers-color-scheme: dark)</code> media query to the import, which will automatically load it if the user's system theme is set to dark.  (This page does that.)  At time of writing, this is supported on the latest versions of all major browsers on the latest versions of Android, iOS, MacOS, and Windows.</p>
+			<code style="display: block;">
+				&lt;link rel="stylesheet" type="text/css" href="material-dark.css" media="(prefers-color-scheme: dark)" /&gt;
+			</code>
+			<p>You can also include/exclude the import based on a user setting.</p>
+			TODO: DEMO
+			<p>You can, of course, not include a light/dark theme option, but that is generally not recommended.</p>
+			<p>See also: <a href="" target="_blank">Material dark theme guidelines &#x2b77;</a></p>
 		</section>
 		<footer>
 			<p>

@@ -1,0 +1,224 @@
+/* Base Material styles for dark theme
+ * Part of the MaterialZ CSS library
+ *
+ * Copyright 2015-2021 Zachary Yaro
+ * Released under the MIT license
+ * https://materialz.dev/LICENSE.txt
+ */
+
+@charset "UTF-8";
+
+body {
+	background-color: #121212;
+	color: #ffffff;
+}
+
+/* --------======== BUTTONS and DROP-DOWNS ========-------- */
+select {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAIAgMAAADCRZTUAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAgJsrThgAAAAySURBVAjXY8hatWolAwxIrVq1BM5hW7VqApzDuGqVAwMcZAG1IDQBtSA0AbUgNCG0AAD8iAqhtDTiaAAAAABJRU5ErkJggg==);
+}
+	button:not(:disabled):hover,
+	button:focus,
+	[role="button"]:not(:disabled):hover,
+	[role="button"]:focus,
+	input[type="button"]:not(:disabled):hover,
+	input[type="button"]:focus,
+	input[type="submit"]:not(:disabled):hover,
+	input[type="submit"]:focus,
+	input[type="reset"]:not(:disabled):hover,
+	input[type="reset"]:focus,
+	select:not(:disabled):hover,
+	select:focus {
+		background-color: #313131;
+		background-color: rgba(128, 128, 128, 0.2);
+	}
+	/* The “active” class is used to force the appearance of the active/pressed state */
+	button:not(:disabled):active,
+	button:not(:disabled).active,
+	[role="button"]:not(:disabled):active,
+	[role="button"]:not(:disabled).active,
+	input[type="button"]:not(:disabled):active,
+	input[type="button"]:not(:disabled).active,
+	input[type="submit"]:not(:disabled):active,
+	input[type="submit"]:not(:disabled).active,
+	input[type="reset"]:not(:disabled):active,
+	input[type="reset"]:not(:disabled).active,
+	select:not(:disabled):active,
+	select:not(:disabled).active {
+		background-color: #444444;
+		background-color: rgba(128, 128, 128, 0.4);
+	}
+
+/* --------======== RADIO BUTTONS AND CHECKBOXES ========-------- */
+input[type="radio"],
+input[type="checkbox"] {
+	border-color: white;
+	color: white;
+}
+	input[type="checkbox"]::after {
+		border-color: #1d1d1d;
+	}
+
+/* --------======== TEXT FIELDS ========-------- */
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+textarea,
+select[size] {
+	border-bottom-color: #c8c8c8;
+}
+
+
+/* --------======== LISTS ========-------- */
+.list li {
+	border-color: #363636;
+	border-color: rgba(128, 128, 128, 0.25);
+}
+
+/* --------======== CARDS ========-------- */
+.card,
+.card.z1 {
+	background-color: #1d1d1d;
+}
+button.z1,
+button.z2,
+button.z3,
+button.z4,
+button.z5,
+[role="button"].z1,
+[role="button"].z2,
+[role="button"].z3,
+[role="button"].z4,
+[role="button"].z5 ,
+input[type="button"].z1,
+input[type="button"].z2,
+input[type="button"].z3,
+input[type="button"].z4,
+input[type="button"].z5,
+input[type="submit"].z1,
+input[type="submit"].z2,
+input[type="submit"].z3,
+input[type="submit"].z4,
+input[type="submit"].z5,
+input[type="reset"].z1,
+input[type="reset"].z2,
+input[type="reset"].z3,
+input[type="reset"].z4,
+input[type="reset"].z5 {
+	background-color: #212121;
+}
+.card.z2,
+button.z1:hover,
+button.z2:hover,
+button.z3:hover,
+button.z4:hover,
+button.z5:hover,
+[role="button"].z1:hover,
+[role="button"].z2:hover,
+[role="button"].z3:hover,
+[role="button"].z4:hover,
+[role="button"].z5:hover,
+input[type="button"].z1:hover,
+input[type="button"].z2:hover,
+input[type="button"].z3:hover,
+input[type="button"].z4:hover,
+input[type="button"].z5:hover,
+input[type="submit"].z1:hover,
+input[type="submit"].z2:hover,
+input[type="submit"].z3:hover,
+input[type="submit"].z4:hover,
+input[type="submit"].z5:hover,
+input[type="reset"].z1:hover,
+input[type="reset"].z2:hover,
+input[type="reset"].z3:hover,
+input[type="reset"].z4:hover,
+input[type="reset"].z5:hover,
+button.z1:focus,
+button.z2:focus,
+button.z3:focus,
+button.z4:focus,
+button.z5:focus,
+[role="button"].z1:focus,
+[role="button"].z2:focus,
+[role="button"].z3:focus,
+[role="button"].z4:focus,
+[role="button"].z5:focus,
+input[type="button"].z1:focus,
+input[type="button"].z2:focus,
+input[type="button"].z3:focus,
+input[type="button"].z4:focus,
+input[type="button"].z5:focus,
+input[type="submit"].z1:focus,
+input[type="submit"].z2:focus,
+input[type="submit"].z3:focus,
+input[type="submit"].z4:focus,
+input[type="submit"].z5:focus,
+input[type="reset"].z1:focus,
+input[type="reset"].z2:focus,
+input[type="reset"].z3:focus,
+input[type="reset"].z4:focus,
+input[type="reset"].z5:focus {
+	background-color: #272727;
+}
+.card.z3,
+button.z1:not(:disabled):active,
+button.z2:not(:disabled):active,
+button.z3:not(:disabled):active,
+button.z4:not(:disabled):active,
+button.z5:not(:disabled):active,
+[role="button"].z1:active,
+[role="button"].z2:active,
+[role="button"].z3:active,
+[role="button"].z4:active,
+[role="button"].z5:active,
+input[type="button"].z1:not(:disabled):active,
+input[type="button"].z2:not(:disabled):active,
+input[type="button"].z3:not(:disabled):active,
+input[type="button"].z4:not(:disabled):active,
+input[type="button"].z5:not(:disabled):active,
+input[type="submit"].z1:not(:disabled):active,
+input[type="submit"].z2:not(:disabled):active,
+input[type="submit"].z3:not(:disabled):active,
+input[type="submit"].z4:not(:disabled):active,
+input[type="submit"].z5:not(:disabled):active,
+input[type="reset"].z1:not(:disabled):active,
+input[type="reset"].z2:not(:disabled):active,
+input[type="reset"].z3:not(:disabled):active,
+input[type="reset"].z4:not(:disabled):active,
+input[type="reset"].z5:not(:disabled):active,
+button.z1:not(:disabled).active,
+button.z2:not(:disabled).active,
+button.z3:not(:disabled).active,
+button.z4:not(:disabled).active,
+button.z5:not(:disabled).active,
+[role="button"].z1.active,
+[role="button"].z2.active,
+[role="button"].z3.active,
+[role="button"].z4.active,
+[role="button"].z5.active,
+input[type="button"].z1:not(:disabled).active,
+input[type="button"].z2:not(:disabled).active,
+input[type="button"].z3:not(:disabled).active,
+input[type="button"].z4:not(:disabled).active,
+input[type="button"].z5:not(:disabled).active,
+input[type="submit"].z1:not(:disabled).active,
+input[type="submit"].z2:not(:disabled).active,
+input[type="submit"].z3:not(:disabled).active,
+input[type="submit"].z4:not(:disabled).active,
+input[type="submit"].z5:not(:disabled).active,
+input[type="reset"].z1:not(:disabled).active,
+input[type="reset"].z2:not(:disabled).active,
+input[type="reset"].z3:not(:disabled).active,
+input[type="reset"].z4:not(:disabled).active,
+input[type="reset"].z5:not(:disabled).active {
+	background-color: #2d2d2d;
+}
+.card.z4 {
+	background-color: #353535;
+}
+.card.z5 {
+	background-color: #373737;
+}
