@@ -18,7 +18,7 @@
 		<link rel="stylesheet" type="text/css" href="material-elements.css" />
 		<link rel="stylesheet" type="text/css" href="material-widgets.css" />
 		<link rel="stylesheet" type="text/css" href="material-depth.css" />
-		<link rel="stylesheet" type="text/css" href="material-dark.css" media="(prefers-color-scheme: dark)" />
+		<link rel="stylesheet" type="text/css" href="material-dark.css" media="(prefers-color-scheme: dark)" id="dark-theme-import" />
 		
 		<link rel="stylesheet" type="text/css" href="demo_fonts/roboto.css" />
 		
@@ -129,6 +129,34 @@
 					ev.preventDefault();
 				}
 			});
+			
+			var darkThemeImport;
+			/**
+			 * Set the dark theme for the page.
+			 * @param {String} setting - Whether to turn the dark theme “off”, “on”, or or back to “system”
+			 */
+			function setDarkTheme(setting) {
+				darkThemeImport = darkThemeImport || document.getElementById('dark-theme-import');
+				switch (setting) {
+					case 'off':
+						if (darkThemeImport.parentElement) {
+							document.getElementsByTagName('head')[0].removeChild(darkThemeImport);
+						}
+						break;
+					case 'on':
+						if (!darkThemeImport.parentElement) {
+							document.getElementsByTagName('head')[0].appendChild(darkThemeImport);
+						}
+						darkThemeImport.media = 'all';
+						break;
+					case 'system':
+						if (!darkThemeImport.parentElement) {
+							document.getElementsByTagName('head')[0].appendChild(darkThemeImport);
+						}
+						darkThemeImport.media = '(prefers-color-scheme: dark)';
+						break;
+				}
+			}
 		</script>
 		
 		<script type="text/javascript" src="material-touch.js"></script>
@@ -643,7 +671,9 @@
 				&lt;link rel="stylesheet" type="text/css" href="material-dark.css" media="(prefers-color-scheme: dark)" /&gt;
 			</code>
 			<p>You can also include/exclude the import based on a user setting.</p>
-			TODO: DEMO
+			<button onclick="setDarkTheme('on');">Force dark theme on</button>
+			<button onclick="setDarkTheme('off');">Force dark theme off</button>
+			<button onclick="setDarkTheme('system');">Use system preference (if supported)</button>
 			<p>You can, of course, not include a light/dark theme option, but that is generally not recommended.</p>
 			<p>See also: <a href="" target="_blank">Material dark theme guidelines &#x2b77;</a></p>
 		</section>
