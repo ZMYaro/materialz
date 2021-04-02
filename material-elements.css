@@ -265,9 +265,7 @@ input[type="checkbox"] {
 		     -o-transition-property: background-color,                     box-shadow;
 		        transition-property: background-color,                     box-shadow;
 	}
-		input[type="radio"]:not(:disabled):hover::before,
 		input[type="radio"]:not(:disabled):focus::before,
-		input[type="checkbox"]:not(:disabled):hover::before,
 		input[type="checkbox"]:not(:disabled):focus::before {
 			background-color: rgba(128, 128, 128, 0.1);
 			-webkit-box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 13px,

@@ -447,7 +447,6 @@ input[type="checkbox"].switch {
 			   -moz-box-shadow: none;
 			        box-shadow: none;
 		}
-		input[type="checkbox"].switch:not(:disabled):hover::after,
 		input[type="checkbox"].switch:not(:disabled):focus::after {
 			background-color: #f8f8f8;
 			-webkit-box-shadow: rgba(0, 0, 0, 0.2 ) 0px 3px 2px -2px,
