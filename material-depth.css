@@ -165,8 +165,6 @@ input[type="reset"].z5 {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.26) 0 2px 5px 0, rgba(0, 0, 0, 0.16) 0 2px 10px 0;
 	   -moz-box-shadow: rgba(0, 0, 0, 0.26) 0 2px 5px 0, rgba(0, 0, 0, 0.16) 0 2px 10px 0;
 	        box-shadow: rgba(0, 0, 0, 0.26) 0 2px 5px 0, rgba(0, 0, 0, 0.16) 0 2px 10px 0;
-	    filter:  progid:DXImageTransform.Microsoft.Glow(Color=#b8b8b8,Strength=5);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Color=#b8b8b8,Strength=5)";
 }
 
 button.z1:hover,
@@ -182,8 +180,6 @@ input[type="reset"].z1:focus {
 	-webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.23), 0 4px 15px 0 rgba(0, 0, 0, 0.175);
 	   -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.23), 0 4px 15px 0 rgba(0, 0, 0, 0.175);
 	        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.23), 0 4px 15px 0 rgba(0, 0, 0, 0.175);
-	    filter:  progid:DXImageTransform.Microsoft.Glow(Color=#b4b4b4,Strength=7);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Color=#b4b4b4,Strength=7)";
 }
 .z2,
 button.z1:enabled:active,
@@ -199,8 +195,6 @@ input[type="reset"].z1.active {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 8px 17px 0, rgba(0, 0, 0, 0.19) 0 6px 20px 0;
 	   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 8px 17px 0, rgba(0, 0, 0, 0.19) 0 6px 20px 0;
 	        box-shadow: rgba(0, 0, 0, 0.2) 0 8px 17px 0, rgba(0, 0, 0, 0.19) 0 6px 20px 0;
-	    filter:  progid:DXImageTransform.Microsoft.Glow(Color=#b0b0b0,Strength=10);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Color=#b0b0b0,Strength=10)";
 }
 .z3,
 button.z2:enabled:active,
@@ -255,6 +249,4 @@ input[type="reset"].z1.disabled {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0, rgba(0, 0, 0, 0.14) 0 2px 5px 0;
 	   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0, rgba(0, 0, 0, 0.14) 0 2px 5px 0;
 	        box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0, rgba(0, 0, 0, 0.14) 0 2px 5px 0;
-	    filter:  progid:DXImageTransform.Microsoft.Glow(Color=#b8b8b8,Strength=5);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Color=#b8b8b8,Strength=5)";
 }
