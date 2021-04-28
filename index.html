@@ -31,7 +31,8 @@
 				   -moz-border-radius: 2px;
 				        border-radius: 2px;
 			}
-				code.col {
+				code.col,
+				.col > code {
 					padding: 16px;
 				}
 			
@@ -130,13 +131,27 @@
 				}
 			});
 			
-			var darkThemeImport;
+			/** {HTMLLinkElement} The `link` that imports the dark theme style sheet */
+			var darkThemeImport,
+			/** {HTMLInputElement} The color picker for the accent color demo */
+				accentColorPicker,
+			/** {HTMLDivElement} The container for the accent color demo */
+				accentColorDemo,
+			/** {HTMLSpanElement} The part of the code sample that shows the selected accent color */
+				accentColorHex;
+			window.addEventListener('load', function () {
+				darkThemeImport = document.getElementById('dark-theme-import');
+				accentColorPicker = document.getElementById('accent-color-picker');
+				accentColorDemo = document.getElementById('accent-color-demo');
+				accentColorHex = document.getElementById('accent-color-hex');
+				accentColorPicker.addEventListener('input', handleAccentColorChange);
+			});
+			
 			/**
 			 * Set the dark theme for the page.
 			 * @param {String} setting - Whether to turn the dark theme “off”, “on”, or or back to “system”
 			 */
 			function setDarkTheme(setting) {
-				darkThemeImport = darkThemeImport || document.getElementById('dark-theme-import');
 				switch (setting) {
 					case 'off':
 						if (darkThemeImport.parentElement) {
@@ -157,11 +172,18 @@
 						break;
 				}
 			}
+			
+			/**
+			 * Handle a newly selected accent color.
+			 * @param {Event} ev
+			 */
+			function handleAccentColorChange(ev) {
+				accentColorDemo.style.setProperty('--mz-accent-color', ev.currentTarget.value);
+				accentColorHex.innerText = ev.currentTarget.value;
+			}
 		</script>
 		
 		<script type="text/javascript" src="material-touch.js"></script>
-		
-		
 	</head>
 	<body>
 		<header role="toolbar" class="appBar z2">
@@ -216,6 +238,7 @@
 				</li>
 				<li><a href="#depth">Depth</a></li>
 				<li><a href="#darktheme">Dark theme</a></li>
+				<li><a href="#accentcolor">Accent color</a></li>
 			</ul>
 		</nav>
 		<a name="elements"></a>
@@ -676,6 +699,49 @@
 			<button onclick="setDarkTheme('system');">Use system preference (if supported)</button>
 			<p>You can, of course, not include a light/dark theme option, but that is generally not recommended.</p>
 			<p>See also: <a href="" target="_blank">Material dark theme guidelines &#x2b77;</a></p>
+		</section>
+		<a name="accentcolor"></a>
+		<br />
+		<header class="category-header">
+			<h1>Accent color</h1>
+			<p>If you only need to support browsers that support CSS custom properties, you can specify a single accent color.</p>
+		</header>
+		<section class="section card z1">
+			<h2>Accent color property</h2>
+			<p>Instead of individually overriding the colors of elements, set the <code>--mz-accent-color</code> property.  Do keep in mind older browsers will ignore your custom property.</p>
+			<!--<iframe src="demo/accent_color.html" class="col"><a href="demo/accent_color.html">Demo</a></iframe>-->
+			<div class="col" id="accent-color-demo" style="--mz-accent-color: #f44336;">
+				<input type="radio" name="accent-radio" />
+				<input type="radio" name="accent-radio" checked="checked" />
+				<br />
+				<input type="checkbox" />
+				<input type="checkbox" checked="checked" />
+				<br />
+				<input type="checkbox" class="switch" />
+				<input type="checkbox" class="switch" checked="checked" />
+				<br />
+				<input type="text" placeholder="Text field" />
+				<br />
+				<input type="range" />
+				<br />
+				<progress value="0.5"></progress>
+				<br />
+				<progress class="circular"></progress>
+			</div>
+			<div class="col">
+				<code style="display: block;">
+					:root {
+					<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;--mz-accent-color: <span id="accent-color-hex">#f44336</span>;
+					<br />
+					}
+				</code>
+				<br />
+				<label>
+					Change the accent color:
+					<input type="color" id="accent-color-picker" value="#f44336" />
+				</label>
+			</div>
 		</section>
 		<footer>
 			<p>
