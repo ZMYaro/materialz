@@ -250,7 +250,6 @@ progress.circular::after,
 	
 	border: 6px solid transparent;
 	border-top-color: currentColor;
-	border-top-color: var(--mz-accent-color, currentColor);
 	
 	-webkit-animation-iteration-count: infinite;
 	   -moz-animation-iteration-count: infinite;
@@ -274,6 +273,8 @@ progress.circular::after,
 		height: 48px;
 		display: inline-block;
 		position: relative;
+		
+		color: var(--mz-accent-color);
 		
 		-webkit-animation-name: materialz-circular-progress-part1;
 		   -moz-animation-name: materialz-circular-progress-part1;
