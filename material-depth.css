@@ -250,3 +250,17 @@ input[type="reset"].z1.disabled {
 	   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0, rgba(0, 0, 0, 0.14) 0 2px 5px 0;
 	        box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0, rgba(0, 0, 0, 0.14) 0 2px 5px 0;
 }
+
+@media (prefers-reduced-motion: reduce) {
+	.z1,
+	.z2,
+	.z3,
+	.z4,
+	.z5 {
+		-webkit-transition-duration: 0s;
+		   -moz-transition-duration: 0s;
+		    -ms-transition-duration: 0s;
+		     -o-transition-duration: 0s;
+		        transition-duration: 0s;
+	}
+}
