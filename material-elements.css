@@ -427,7 +427,8 @@ input[type="checkbox"] {
 		}
 
 /* --------======== RANGE SLIDERS and PROGRESS BARS ========-------- */
-input[type="range"], progress {
+input[type="range"],
+progress {
 	height: 2px;
 	margin: 16px 8px;
 	border-style: none;
@@ -439,6 +440,8 @@ input[type="range"], progress {
 	
 	-webkit-transition-duration: 0.1s;
 	   -moz-transition-duration: 0.1s;
+	    -ms-transition-duration: 0.1s;
+	     -o-transition-duration: 0.1s;
 	        transition-duration: 0.1s;
 }
 	input[type="range"]::-moz-range-track {
@@ -641,5 +644,47 @@ select:disabled {
 @media (max-width: 600px) {
 	body {
 		padding: 16px;
+	}
+}
+
+/* Override animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	input[type="radio"],
+	input[type="checkbox"],
+	input[type="radio"]::before,
+	input[type="checkbox"]::before,
+	input[type="checkbox"]::after,
+	input[type="range"],
+	progress {
+		-webkit-transition-duration: 0s;
+		   -moz-transition-duration: 0s;
+		    -ms-transition-duration: 0s;
+		     -o-transition-duration: 0s;
+		        transition-duration: 0s;
+	}
+	
+	input[type="radio"]::after {
+		-webkit-transition-delay: 0s, 0s, 0s, 0s;
+		   -moz-transition-delay: 0s, 0s, 0s, 0s;
+		    -ms-transition-delay:     0s, 0s, 0s;
+		     -o-transition-delay:     0s, 0s, 0s;
+		        transition-delay:     0s,     0s;
+		-webkit-transition-duration: 0s, 0s, 0s, 0s;
+		   -moz-transition-duration: 0s, 0s, 0s, 0s;
+		    -ms-transition-duration:     0s, 0s, 0s;
+		     -o-transition-duration:     0s, 0s, 0s;
+		        transition-duration:     0s,     0s;
+	}
+	
+	input[type="range"]::-webkit-slider-thumb {
+		-webkit-transition-duration: 0s;
+		        transition-duration: 0s;
+	}
+	input[type="range"]::-moz-range-thumb {
+		-moz-transition-duration: 0s;
+		     transition-duration: 0s;
+	}
+	input[type="range"]::-ms-thumb {
+		transition-duration: 0s;
 	}
 }
