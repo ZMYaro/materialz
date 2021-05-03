@@ -32,14 +32,14 @@ You can enable an instant dark theme by including “**material-dark.css**”.  
 
 ## Make it work a little better in older mobile browsers
 One great use of MaterialZ is to make mobile web apps look like native Android 5+ apps.  MaterialZ includes a script to make sure all widgets respond to touch properly in mobile WebKit (Mobile Safari, AOSP Browser, earlier Chrome for Android) by overriding the default tap delay.
-* Make sure you include the “material-touch.js” file.
+* Make sure you include the “**material-touch.js**” file.
 * Add a script tag to your page: `<script type="text/javascript" src="material-touch.js"></script>`.
 
 ## Make it work a little better in older desktop browsers
-You can add the `fix-*.css` stylesheets to fix certain issues ith older browsers, such as IE < 9 and Safari < 6, if you need to support those, however you should only load those stylesheets in those browsers, as they include overrides for better styles used in newer browsers.
+You can add the “**fix-\*.css**” stylesheets to fix certain issues ith older browsers, such as IE < 9 and Safari < 6, if you need to support those, however you should only load those stylesheets in those browsers, as they include overrides for better styles used in newer browsers.
 
 ## The Roboto Font
-`material-elements.css` imports basic Roboto and Roboto Mono by default.  If you need more weights or character sets, you can load them through [Google Web Fonts](https://fonts.google.com/specimen/Roboto).
+“**material-elements.css**” imports basic Roboto and Roboto Mono by default.  If you need more weights or character sets, you can load them through [Google Web Fonts](https://fonts.google.com/specimen/Roboto).
 
 ## Known issues
 * Certain form elements (checkboxes, radio buttons) are only properly themed in WebKit-derived browsers (e.g. Safari, Chrome, new Edge, newer Opera) and newer versions of Firefox, and partially themed in Presto (older Opera) and the latest versions of Trident/EdgeHTML (IE10+, Edge Legacy).
