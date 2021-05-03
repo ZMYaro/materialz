@@ -238,6 +238,7 @@
 					</ul>
 				</li>
 				<li><a href="#depth">Depth</a></li>
+				<li><a href="#responsive">Responsive design</a></li>
 				<li><a href="#darktheme">Dark theme</a></li>
 				<li><a href="#accentcolor">Accent color</a></li>
 			</ul>
@@ -556,7 +557,7 @@
 		<a name="cards"></a>
 		<section class="section card full-width z1">
 			<h2>Cards</h2>
-			<p>An element with the <code>card</code> class will be styled as a paper card.  Add a <a href="#depth">depth</a> class to determine how high to visually raise the card.  A <code>card</code> with the <code>full-width</code> class as well will have &ldquo;auto&rdquo; left and right margins, and will fill the entire window width in narrow windows.  (Each of these sections is a <code>&lt;section class="card full-width z1"&gt;</code>.)</p>
+			<p>An element with the <code>card</code> class will be styled as a paper card.  Add a <a href="#depth">depth</a> class to determine how high to visually raise the card.  A <code>card</code> with the <code>full-width</code> class as well will have &ldquo;auto&rdquo; left and right margins, and will fill the entire window width in <a href="#responsive">narrow windows</a>.  (Each of these sections is a <code>&lt;section class="card full-width z1"&gt;</code>.)</p>
 			<div class="col">
 				<div class="card z1" style="width: 192px; height: 192px;"></div>
 			</div>
@@ -678,6 +679,21 @@
 				<br />
 				&lt;/div&gt;
 			</code>
+		</section>
+		<a name="responsive"></a>
+		<br />
+		<header class="category-header">
+			<h1>Responsive design</h1>
+			<p>MaterialZ automatically adjusts a few things in narrow windows.</p>
+		</header>
+		<section class="section card full-width z1">
+			<h2>Narrow window changes</h2>
+			<p>In a window <strong>&#x2264; 600px</strong> wide, MaterialZ makes the following adjustments:</p>
+			<ul>
+				<li>Body padding reduces by 8px.</li>
+				<li>Full-width <a href="#cards">cards</a> expand to fill the window width and remove their rounded corners.</li>
+			</ul>
+			<small>As of the current version of MaterialZ, the 600px breakpoint cannot be configured, however you can find/replace &ldquo;600px&rdquo; in the MaterialZ CSS files to change the breakpoint.  This will be configurable in a future version of MaterialZ.</small>
 		</section>
 		<a name="darktheme"></a>
 		<br />
