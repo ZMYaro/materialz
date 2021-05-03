@@ -570,6 +570,12 @@ input[type="password"],
 input[type="email"],
 input[type="url"],
 input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
 textarea,
 select[size] {
 	-webkit-appearance: none;
@@ -606,6 +612,12 @@ select[size] > option {
 	input[type="email"]:focus,
 	input[type="url"]:focus,
 	input[type="number"]:focus,
+	input[type="tel"]:focus,
+	input[type="date"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="month"]:focus,
+	input[type="time"]:focus,
+	input[type="week"]:focus,
 	textarea:focus,
 	select[size]:focus {
 		border-color: #40c4ff;
@@ -618,6 +630,12 @@ select[size] > option {
 	input[type="email"]:focus,
 	input[type="url"]:focus,
 	input[type="number"]:focus,
+	input[type="tel"]:focus,
+	input[type="date"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="month"]:focus,
+	input[type="time"]:focus,
+	input[type="week"]:focus,
 	textarea:focus {
 		padding-bottom: 3px;
 		border-bottom-width: 2px;
