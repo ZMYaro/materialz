@@ -39,8 +39,9 @@ You can add the `fix-*.css` stylesheets to fix certain issues ith older browsers
 `material-elements.css` imports basic Roboto and Roboto Mono by default.  If you need more weights or character sets, you can load them through [Google Web Fonts](https://fonts.google.com/specimen/Roboto).
 
 ## Known issues
-* Certain form elements (checkboxes, radio buttons) are only properly themed in WebKit-derived browsers (e.g. Safari, Chrome, new Edge, newer Opera) and newer versions of Firefox and partially themed in Presto (older Opera) and the latest versions of Trident/EdgeHTML (IE10+, Edge Legacy).
+* Certain form elements (checkboxes, radio buttons) are only properly themed in WebKit-derived browsers (e.g. Safari, Chrome, new Edge, newer Opera) and newer versions of Firefox, and partially themed in Presto (older Opera) and the latest versions of Trident/EdgeHTML (IE10+, Edge Legacy).
 * Certain form elements, such as range sliders, are unsupported in some older browsers.
+* Accent color custom property only partially works in some older versions of WebKit (Safari).
 
 The above issues are the result of browser limitations or lack of documented solutions.
 
