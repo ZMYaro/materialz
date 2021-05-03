@@ -4,12 +4,12 @@ MaterialZ is a CSS library that implements [Google's Material Design guidelines]
 
 
 ## Material-ize your site
-If you want Material-/Paper-themed HTML elements on your page, you just need to include “material-elements.css”, which styles most basic HTML elements.
+If you want Material-/Paper-themed HTML elements on your page, you just need to include “**material-elements.css**”, which styles most basic HTML elements.  Add that style sheet to an unstyled page, and it should “just work”!
 
 [See all elements and example code at materialz.dev/#elements →](https://materialz.dev/#elements)
 
 ## Add Material widgets
-You can use widgets such as action bars, lists, and cards by adding “material-widgets.css” and specifying classes:
+You can use widgets such as action bars, lists, and cards by adding “**material-widgets.css**” and specifying classes:
 * To add a top app bar, add an element with the `appBar` class (e.g., `<header class="appBar">`).
 * To add a toolbar, add an element with `role="toolbar"` (e.g., `<div role="toolbar">`).  Toolbar buttons are flat and round by default.
   - An Android action bar is frequently just an app bar with toolbar buttons - `<header class="appBar" role="toolbar">`.
@@ -23,11 +23,11 @@ Note: adding the widgets stylesheet will automatically add padding to the `body`
 [See all widgets and example code at materialz.dev/#widgets →](https://materialz.dev/#widgets)
 
 ## Add depth
-You can add shadows to elements with classes `z1`-`z5`.  These are best used with `<button>`s (e.g., `<button class="z1">` for a raised button), `.card`s (e.g., `<div class="card z2">`), and `.appBar`s (e.g., `<header class="appBar z3">`).
+You can add shadows to elements by adding “**material-depth.css**” and then applying the classes `z1`-`z5`.  These are best used with `<button>`s (e.g., `<button class="z1">` for a raised button), `.card`s (e.g., `<div class="card z2">`), and `.appBar`s (e.g., `<header class="appBar z3">`).
 
 [See demo and example code at materialz.dev/#depth →](https://materialz.dev/#depth)
 
-## Make it work on older mobile browsers
+## Make it work a little better in older mobile browsers
 One great use of MaterialZ is to make mobile web apps look like native Android 5+ apps.  MaterialZ includes a script to make sure all widgets respond to touch properly in mobile WebKit (Mobile Safari, AOSP Browser, earlier Chrome for Android) by overriding the default tap delay.
 * Make sure you include the “material-touch.js” file.
 * Add a script tag to your page: `<script type="text/javascript" src="material-touch.js"></script>`.
