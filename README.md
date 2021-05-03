@@ -11,10 +11,12 @@ If you want Material-/Paper-themed HTML elements on your page, you just need to 
 ## Add Material widgets
 You can use widgets such as action bars, lists, and cards by adding “material-widgets.css” and specifying classes:
 * To add a top app bar, add an element with the `appBar` class (e.g., `<header class="appBar">`).
-* To add a toolbar, add an element with `role="toolbar"` class (e.g., `<div role="toolbar">`).  Toolbar buttons are flat and circular by default.
+* To add a toolbar, add an element with `role="toolbar"` (e.g., `<div role="toolbar">`).  Toolbar buttons are flat and round by default.
   - An Android action bar is frequently just an app bar with toolbar buttons - `<header class="appBar" role="toolbar">`.
-* To add a list, add a `<ul>` or `<ol>` element with the class `list` (e.g., `<ul class="list">`).
-* To add a card, add the `card` class to an element.  You may wish to use the depth classes to "raise" the card as well (see below).
+* To add a list, add a `<ul>` or `<ol>` element with the `list` class (e.g., `<ul class="list">`).
+* To add a card, add the `card` class to an element.  You can make it fill the width of narrow windows by adding the `full-width` class as well.  You may also wish to use the depth classes to “raise” the card as well (see below).
+* To add a circular progress spinner, add a `<progress>` element with the `circular` class (e.g., `<progress class="circular">`).
+* To add a toggle switch, add a checkbox with the `switch` class (e.g., `<input type="checkbox" class="switch" />`).
 
 Note: adding the widgets stylesheet will automatically add padding to the `body` for the default app bar size.
 
