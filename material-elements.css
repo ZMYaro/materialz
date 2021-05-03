@@ -330,9 +330,9 @@ input[type="radio"] {
 		     -o-transition-property:                     box-shadow,      -o-transform, transform;
 		        transition-property:                     box-shadow,                    transform;
 		
-		-webkit-box-shadow: inset 0 0 0 0;
-		   -moz-box-shadow: inset 0 0 0 0;
-		        box-shadow: inset 0 0 0 0;
+		-webkit-box-shadow: inset 0 0 0 0 currentcolor;
+		   -moz-box-shadow: inset 0 0 0 0 currentcolor;
+		        box-shadow: inset 0 0 0 0 currentcolor;
 		
 		-webkit-transform: scale(1);
 		   -moz-transform: scale(1);
@@ -348,9 +348,9 @@ input[type="radio"] {
 			        transition-delay: 0, 0.13s;
 			
 			color: inherit;
-			-webkit-box-shadow: inset 0 0 0 10px;
-			   -moz-box-shadow: inset 0 0 0 10px;
-			        box-shadow: inset 0 0 0 10px;
+			-webkit-box-shadow: inset 0 0 0 10px currentcolor;
+			   -moz-box-shadow: inset 0 0 0 10px currentcolor;
+			        box-shadow: inset 0 0 0 10px currentcolor;
 			
 			-webkit-transform: scale(0.65);
 			   -moz-transform: scale(0.65);
@@ -364,17 +364,16 @@ input[type="checkbox"] {
 	-webkit-border-radius: 2px;
 	   -moz-border-radius: 2px;
 	        border-radius: 2px;
-	color: black;
-	-webkit-box-shadow: inset 0 0 0 0;
-	   -moz-box-shadow: inset 0 0 0 0;
-	        box-shadow: inset 0 0 0 0;
+	-webkit-box-shadow: inset 0 0 0 0 currentcolor;
+	   -moz-box-shadow: inset 0 0 0 0 currentcolor;
+	        box-shadow: inset 0 0 0 0 currentcolor;
 }
 	input[type="checkbox"]:checked {
 		color: #40c4ff;
 		color: var(--mz-accent-color, #40c4ff);
-		-webkit-box-shadow: inset 0 0 0 10px;
-		   -moz-box-shadow: inset 0 0 0 10px;
-		        box-shadow: inset 0 0 0 10px;
+		-webkit-box-shadow: inset 0 0 0 10px currentcolor;
+		   -moz-box-shadow: inset 0 0 0 10px currentcolor;
+		        box-shadow: inset 0 0 0 10px currentcolor;
 	}
 	input[type="checkbox"]::after {
 		content: '';
