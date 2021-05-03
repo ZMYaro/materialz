@@ -9,7 +9,7 @@ If you want Material-/Paper-themed HTML elements on your page, you just need to 
 [See all elements and example code at materialz.dev/#elements →](https://materialz.dev/#elements)
 
 ## Add Material widgets
-You can use widgets such as action bars, lists, and cards by adding “**material-widgets.css**” and specifying classes:
+You can use widgets such as action bars, lists, and cards by including “**material-widgets.css**” and specifying classes:
 * To add a top app bar, add an element with the `appBar` class (e.g., `<header class="appBar">`).
 * To add a toolbar, add an element with `role="toolbar"` (e.g., `<div role="toolbar">`).  Toolbar buttons are flat and round by default.
   - An Android action bar is frequently just an app bar with toolbar buttons - `<header class="appBar" role="toolbar">`.
@@ -23,9 +23,12 @@ Note: adding the widgets stylesheet will automatically add padding to the `body`
 [See all widgets and example code at materialz.dev/#widgets →](https://materialz.dev/#widgets)
 
 ## Add depth
-You can add shadows to elements by adding “**material-depth.css**” and then applying the classes `z1`-`z5`.  These are best used with `<button>`s (e.g., `<button class="z1">` for a raised button), `.card`s (e.g., `<div class="card z2">`), and `.appBar`s (e.g., `<header class="appBar z3">`).
+You can add shadows to elements by including “**material-depth.css**” and then applying the classes `z1`-`z5`.  These are best used with `<button>`s (e.g., `<button class="z1">` for a raised button), `.card`s (e.g., `<div class="card z2">`), and `.appBar`s (e.g., `<header class="appBar z3">`).
 
 [See demo and example code at materialz.dev/#depth →](https://materialz.dev/#depth)
+
+## Add dark theme
+You can enable an instant dark theme by including “**material-dark.css**”.  Import it with the `prefers-color-scheme: dark` media query to automatically respect the user's system dark theme setting (on OSes/browsers that support it).
 
 ## Make it work a little better in older mobile browsers
 One great use of MaterialZ is to make mobile web apps look like native Android 5+ apps.  MaterialZ includes a script to make sure all widgets respond to touch properly in mobile WebKit (Mobile Safari, AOSP Browser, earlier Chrome for Android) by overriding the default tap delay.
