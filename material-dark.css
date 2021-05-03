@@ -50,14 +50,9 @@ select {
 	}
 
 /* --------======== RADIO BUTTONS AND CHECKBOXES ========-------- */
-input[type="radio"],
-input[type="checkbox"] {
-	border-color: white;
-	color: white;
+input[type="checkbox"]::after {
+	border-color: #1d1d1d;
 }
-	input[type="checkbox"]::after {
-		border-color: #1d1d1d;
-	}
 
 /* --------======== TEXT FIELDS ========-------- */
 input[type="text"],

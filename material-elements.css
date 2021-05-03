@@ -195,8 +195,8 @@ input[type="checkbox"] {
 	
 	border-style: solid;
 	border-width: 2px;
-	border-color: black;
-	color: black;
+	color: inherit;
+	border-color: currentcolor;
 	
 	background-color: transparent;
 	background-repeat: no-repeat;
@@ -223,8 +223,6 @@ input[type="checkbox"] {
 	}
 	input[type="radio"]:checked,
 	input[type="checkbox"]:checked {
-		border-color: #40c4ff;
-		border-color: var(--mz-accent-color, #40c4ff);
 		color: #40c4ff;
 		color: var(--mz-accent-color, #40c4ff);
 	}
