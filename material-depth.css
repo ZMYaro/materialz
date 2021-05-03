@@ -29,6 +29,17 @@
 	     -o-transition-property: box-shadow;
 	        transition-property: box-shadow;
 }
+.card.full-width.z1,
+.card.full-width.z2,
+.card.full-width.z3,
+.card.full-width.z4,
+.card.full-width.z5 {
+	-webkit-transition-property: margin, border-radius, -webkit-box-shadow, box-shadow;
+	   -moz-transition-property: margin, border-radius, -moz-box-shadow, box-shadow;
+	    -ms-transition-property: margin, border-radius, box-shadow;
+	     -o-transition-property: margin, border-radius, box-shadow;
+	        transition-property: margin, border-radius, box-shadow;
+}
 button.z1,
 button.z2,
 button.z3,
