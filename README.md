@@ -31,6 +31,8 @@ You can add shadows to elements by including “**material-depth.css**” and th
 ## Add dark theme
 You can enable an instant dark theme by including “**material-dark.css**”.  Import it with the `prefers-color-scheme: dark` media query to automatically respect the user's system dark theme setting (on OSes/browsers that support it).
 
+[See demo and example code at materialz.dev/#darktheme →](https://materialz.dev/#darktheme)
+
 ## Make it work a little better in older mobile browsers
 One great use of MaterialZ is to make mobile web apps look like native Android 5+ apps.  MaterialZ includes a script to make sure all widgets respond to touch properly in mobile WebKit (Mobile Safari, AOSP Browser, earlier Chrome for Android) by overriding the default tap delay.
 * Make sure you include the “**material-touch.js**” file.
