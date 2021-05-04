@@ -1,4 +1,5 @@
 # MaterialZ
+<img src="https://raw.githubusercontent.com/ZMYaro/materialz/master/logo/banner.svg" width="680" alt="MaterialZ logo." />
 
 MaterialZ is a CSS library that implements [Google's Material Design guidelines](https://material.io/design/introduction) in plain CSS.
 
