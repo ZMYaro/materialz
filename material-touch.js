@@ -24,7 +24,7 @@
 	}
 	
 	/**
-	 * Add the ìactiveî class to the touched element
+	 * Add the ‚Äúactive‚Äù class to the touched element
 	 * @param {TouchEvent} e
 	 */
 	function makeActive(e) {
@@ -39,7 +39,7 @@
 	}
 	
 	/**
-	 * Remove the ìactiveî class from the touched element
+	 * Remove the ‚Äúactive‚Äù class from the touched element
 	 * @param {TouchEvent} e
 	 */
 	function makeInactive(e) {
